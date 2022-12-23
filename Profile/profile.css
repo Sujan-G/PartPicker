@@ -7,9 +7,16 @@ a {
     color: #2c87c3;
     border-radius: 5px;
     text-decoration: none;
-    display
+}
+
+.img{
+    text-align: center;
+    background-color: black;
+    padding-bottom: 1%;
+   
 }
 h1{
+    color:ivory;
     text-align: center;
     padding-top: 3%;
     padding-left: 3%;
@@ -19,21 +26,22 @@ h1{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
+
 hr{
-    background-color: black;
+    background-color:ivory;
     height:0.8px;
     width:auto;
     margin-top: 0;
-   margin-bottom: 2%;
+    margin-bottom: 2%;
 }
 
 section{
     text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 5px;
     display: block;
-    background-color: whitesmoke;
-    padding-bottom: 1%;
+    background-color:#191b2a;
+    padding-bottom: 0%;
     width: 100%;
     height:100%;
     margin-left: auto;
@@ -41,13 +49,20 @@ section{
     margin-top: 0em;
     margin-bottom: 0px;
     margin: auto;
+    border-radius: 0%;
     position: relative;
 }
 .links li{
     position: relative;
     display:inline-block;
-    padding: 20px
+    padding: 20px;
 }
-.links :hover {
-    background-color: #191b2a;
+.links li a{
+    
+    background-color:none;
+    color:gray;
+}
+.links li a:hover{
+    background-color:black;
+    color:ivory;
 }
