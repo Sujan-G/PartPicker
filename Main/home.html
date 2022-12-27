@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
@@ -12,38 +13,175 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleshome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0469953560.js" crossorigin="anonymous"></script>
     <title>Home Page</title>
 </head>
 
 <body>
-    <section class="header">
-        <nav>
-            <a href="home.html"><img src="https://cdna.pcpartpicker.com/static/forever/img/pcpp-logo.svg"></a>
-            <div class="divlinks">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+
+    <header class="header">
+
+        <a href="#" class="logo"> <img src="https://cdna.pcpartpicker.com/static/forever/img/pcpp-logo.svg"></a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#builder">builder</a>
+            <div class="dropdown">
+                <button class="dropbtn">Browse Products <i class="fa-solid fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+
+                            <td>
+                                <div class="gallery">
+                                    <a target="_blank" href="#">
+                                        <img src="/image/nav-cpu.png" width="100" height="100">
+                                    </a>
+                                    <div class="desc">CPU</div>
+                                </div>
+                            <td>
+                                <div class="gallery">
+                                    <a target="_blank" href="#">
+                                        <img src="/image/nav-memory.png" width="100" height="100">
+                                    </a>
+                                    <div class="desc">Memory</div>
+                                </div>
+                            <td>
+                                <div class="gallery">
+                                    <a target="_blank" href="#">
+                                        <img src="/image/nav-cpucooler.png" width="100" height="100">
+                                    </a>
+                                    <div class="desc">CPU Cooler</div>
+                                </div>
+                            <td>
+                                <div class="gallery">
+                                    <a target="_blank" href="#">
+                                        <img src="/image/nav-motherboard.png" width="100" height="100">
+                                    </a>
+                                    <div class="desc">Motherboard</div>
+                                </div>
+                            <td>
+                </div>
+                <tr>
+                    <td>
+                        <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img src="/image/nav-ssd.png" width="100" height="100">
+                            </a>
+                            <div class="desc">Storage</div>
+                        </div>
+                    <td>
+
+                        <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img src="/image/nav-videocard.png" width="100" height="100">
+                            </a>
+                            <div class="desc">Graphics Card</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img src="/image/nav-powersupply.png" width="100" height="100">
+                            </a>
+                            <div class="desc">Power Supply</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img src="/image/nav-case.png" width="100" height="100">
+                            </a>
+                            <div class="desc">Cabinet</div>
+                        </div>
+                    </td>
             </div>
+            </table>
+            </div>
+
+            <a href="#benchmarks">Benchmarks</a>
         </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+
+        <form action="" class="login-form">
+            <h3>Login</h3>
+            <input type="email" placeholder="Email ID" class="box" required>
+            <input type="password" placeholder="Password" class="box" required>
+            <input type="submit" value="Sign In" class="btn">
+            <p></p>
+            <p>Forgot Password? <a href="forgot.html">click here</a></p>
+            <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+
+        </form>
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Build Guides</h3>
+            <!-- <p> <b>Building your own PC and need ideas on where to get started? Explore our build guides which cover systems for a variety of use-cases and budgets.</b></p> -->
+            <a href="#" class="btn"><b>View Guides</a>
+        </div>
+
     </section>
 
-    <section class="header2">
-        <nav>
-            <div class="box2">
 
-                <span style="border: 1px solid silver; border-radius: 0.20em; padding: 0.5em; margin-right: auto;">
-                    <li><i class="fa-solid fa-microchip fa-2x"></i><a href="#">Browse Products</a></li>
-                </span>
-                <span style="border: 1px solid silver; border-radius: 0.25em; padding: 0.5em;">
-                    <li><a href="#">Forum</a></li>
-                </span>
-                <li><a href="#">Benchmarks</a></li>
+    <section class="features" id="features">
 
-        </nav>
+        <h1 class="heading"> our <span>features</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="image/feature-img-1.png" alt="">
+                <h3>Build Guides</h3>
+                <p>
+                    Building your own PC and need ideas on where to get started? Explore our build guides which
+                    cover systems for a variety of use-cases and budgets.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="image/feature-img-2.png" alt="">
+                <h3>free delivery</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="image/feature-img-3.png" alt="">
+                <h3>easy payments</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
     </section>
 
 
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
 </body>
 
 </html>
