@@ -732,17 +732,17 @@ section {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    <<<<<<< HEAD padding-right: 0%;
+    padding-right: 0%;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    =======padding-right: 20%;
+   padding-right: 20%;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    >>>>>>>3641d0e90e6b18b2c363b54d64929e35a499eb3a color: black;
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: inline-block;
