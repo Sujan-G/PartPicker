@@ -314,6 +314,23 @@ section {
     padding: 1rem 0;
     line-height: 1.8;
 }
+.cpu {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background-color:black;
+    background-position: 0% 35%;
+    background-size: 100%;
+    padding-top: 14rem;
+    padding-bottom: 5rem;
+}
+
+.cpu .content h3 {
+    font-size: 3rem;
+    color:#fff;
+    font-family: 'Chivo Mono', monospace;
+    font-family: 'Inter', sans-serif;
+}
 
 .features .box-container {
     display: grid;
