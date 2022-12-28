@@ -314,7 +314,7 @@ section {
     padding: 1rem 0;
     line-height: 1.8;
 }
-.cpu {
+.parts {
     display: flex;
     align-items: top;
     justify-content: center;
@@ -325,7 +325,7 @@ section {
     padding-bottom: 5rem;
 }
 
-.cpu .content h3 {
+.parts .content h3 {
     font-size: 3rem;
     color:#fff;
     font-family: 'Chivo Mono', monospace;
