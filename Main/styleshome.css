@@ -10,6 +10,7 @@
     --outline-hover: .2rem solid var(--black);
 }
 
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -31,6 +32,7 @@ html {
 
 body {
     background: #eee;
+    
 }
 
 section {
@@ -43,6 +45,7 @@ section {
     padding-bottom: 3rem;
     font-size: 3.5rem;
     color: var(--black);
+  
 }
 
 .heading span {
@@ -81,7 +84,9 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 2%;
-    background: #191b2a;
+    /* background: #191b2a; */
+    opacity: 84%;
+  
 
 }
 
@@ -96,6 +101,7 @@ section {
     font-size: 1.7rem;
     margin: 0 1rem;
     color: #fff;
+    
 }
 
 .header .navbar a:hover {
@@ -755,6 +761,7 @@ section {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding-right: 0%;
+    opacity: 250%;
 }
 
 /* Links inside the dropdown */
