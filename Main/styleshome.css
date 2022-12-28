@@ -741,6 +741,10 @@ section {
     display: inline-block;
 }
 
+.dropdown .a:hover{
+    color: #ff7800;
+}
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
