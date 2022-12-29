@@ -846,10 +846,7 @@ div .numbertext h1{
 
 div .numbertext .options{
     background-color: #76b900;
-    margin-top: 2rem;
-    display: inline-block;
     padding: .8rem 2rem;
-    font-size: 1.1rem;
     cursor: pointer;
     color: #fff;
     font-size: 15px;
@@ -859,4 +856,39 @@ div .numbertext .options{
 
 div .numbertext .options:hover{
     background-color: #5c8a06;
+}
+
+div .numbertext .options1{
+    background-color:#ff7800;
+    padding: .8rem 2rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 1000;
+}
+
+div .numbertext .options1:hover{
+    background-color: #d26a10;
+}
+
+div .rx h1{
+    font-size: 4.8rem;
+}
+
+div .rx a{
+    color: #F90948;
+    font-size:5rem;
+}
+
+div .numbertext .options2{
+    background-color:#F90948;
+    padding: .8rem 2rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 1000;   
+}
+
+div .numbertext .options2:hover{
+    background-color: #f90949b9;
 }
