@@ -366,6 +366,10 @@ section {
     color: var(--light-color);
     padding: 1rem 0;
 }
+.features .box-container table td{
+    margin-left: 10px;
+   background-color: #fff;
+}
 
 /* media queries  */
 
