@@ -340,17 +340,17 @@ section {
 }
 
 .features .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+    display:grid;
+    /* gap: 1.5rem; */
+    /* padding-right: -20px; */
 }
 
 .features .box-container .box {
-    padding: 3rem 2rem;
+    padding: 4rem 1rem;
     background: #fff;
     outline: var(--outline);
     outline-offset: -1rem;
-    text-align: center;
+    /* text-align: center; */
     box-shadow: var(--box-shadow);
 }
 
@@ -891,4 +891,17 @@ div .numbertext .options2 {
 
 div .numbertext .options2:hover {
     background-color: #f90949b9;
+}
+
+.builds h1{
+    padding-left: 25px;
+    font-size: 2rem;
+}
+hr{
+    background-color: black;
+    height:0.8px;
+    width:85%;
+    margin-top: 0;
+
+   
 }
