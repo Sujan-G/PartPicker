@@ -32,7 +32,7 @@ html {
 
 body {
     background: #eee;
-    
+
 }
 
 section {
@@ -45,7 +45,7 @@ section {
     padding-bottom: 3rem;
     font-size: 3.5rem;
     color: var(--black);
-  
+
 }
 
 .heading span {
@@ -86,7 +86,7 @@ section {
     padding: 2rem 2%;
     /* background: #191b2a; */
     /* opacity: 84%; */
-  
+
 
 }
 
@@ -101,7 +101,7 @@ section {
     font-size: 1.7rem;
     margin: 0 1rem;
     color: #fff;
-    
+
 }
 
 .header .navbar a:hover {
@@ -827,7 +827,7 @@ table {
 }
 
 
-div .numbertext{
+div .numbertext {
     color: #fff;
     font-size: 20px;
     padding-top: 17%;
@@ -835,31 +835,31 @@ div .numbertext{
     font-weight: 1000;
 }
 
-div .numbertext a{
+div .numbertext a {
     color: #ff7800;
     font-size: 4.8rem;
 }
 
-div .numbertext h1{
-      font-size:4.8rem;
+div .numbertext h1 {
+    font-size: 4.8rem;
 }
 
-div .numbertext .options{
+div .numbertext .options {
     background-color: #76b900;
     padding: .8rem 2rem;
     cursor: pointer;
     color: #fff;
     font-size: 15px;
     font-weight: 1000;
-   
+
 }
 
-div .numbertext .options:hover{
+div .numbertext .options:hover {
     background-color: #5c8a06;
 }
 
-div .numbertext .options1{
-    background-color:#ff7800;
+div .numbertext .options1 {
+    background-color: #ff7800;
     padding: .8rem 2rem;
     cursor: pointer;
     color: #fff;
@@ -867,28 +867,28 @@ div .numbertext .options1{
     font-weight: 1000;
 }
 
-div .numbertext .options1:hover{
+div .numbertext .options1:hover {
     background-color: #d26a10;
 }
 
-div .rx h1{
+div .rx h1 {
     font-size: 4.8rem;
 }
 
-div .rx a{
+div .rx a {
     color: #F90948;
-    font-size:5rem;
+    font-size: 5rem;
 }
 
-div .numbertext .options2{
-    background-color:#F90948;
+div .numbertext .options2 {
+    background-color: #F90948;
     padding: .8rem 2rem;
     cursor: pointer;
     color: #fff;
     font-size: 15px;
-    font-weight: 1000;   
+    font-weight: 1000;
 }
 
-div .numbertext .options2:hover{
+div .numbertext .options2:hover {
     background-color: #f90949b9;
 }
