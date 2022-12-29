@@ -366,10 +366,15 @@ section {
     color: var(--light-color);
     padding: 1rem 0;
 }
-.features .box-container table td{
-    margin-left: 10px;
-   background-color: #fff;
+
+.features .box-container table {
+    background-color: #fff;
+    border: var(--border);
+
 }
+
+
+
 
 /* media queries  */
 
@@ -616,4 +621,22 @@ hr {
     margin-top: 0;
 
 
+}
+
+.row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
