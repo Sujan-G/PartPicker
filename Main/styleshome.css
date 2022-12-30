@@ -828,6 +828,10 @@ table {
     background-color: #191b2a;
 }
 
+table .tr .td{
+    background-color: #d26a10;
+}
+
 
 div .numbertext {
     color: #fff;
@@ -893,4 +897,18 @@ div .numbertext .options2 {
 
 div .numbertext .options2:hover {
     background-color: #f90949b9;
+}
+
+.builds h1 {
+    padding-left: 25px;
+    font-size: 2rem;
+}
+
+hr {
+    background-color: black;
+    height: 0.8px;
+    width: 85%;
+    margin-top: 0;
+
+
 }
