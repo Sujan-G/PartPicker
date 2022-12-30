@@ -348,22 +348,27 @@ section {
 }
 
 .features .box-container .box {
-    padding: 3rem 2rem;
-    background: #fff;
-    outline: var(--outline);
-    outline-offset: -1rem;
+    padding: 5rem 2rem;
+    background: #fff; 
     text-align: center;
-    box-shadow: var(--box-shadow);
+
+    
 }
 
-.features .box-container .box:hover {
-    outline: var(--outline-hover);
-    outline-offset: 0rem;
+.features .box-container .box:hover{
+    background-color: #B18C5A;
 }
+
 
 .features .box-container .box img {
     margin: 1rem 0;
-    height: 15rem;
+    height: 45rem;
+    float: left;
+}
+
+.features .box-container .amd {
+  height: 48rem;
+  padding-left: 70%;
 }
 
 .features .box-container .box h3 {
@@ -912,3 +917,7 @@ hr {
 
 
 }
+
+/* .box-container .box img{
+    padding-right: 20%;
+} */
