@@ -537,6 +537,10 @@ table {
     background-color: #191b2a;
 }
 
+table .tr .td{
+    background-color: #d26a10;
+}
+
 
 div .numbertext {
     color: #fff;
@@ -616,4 +620,9 @@ hr {
     margin-top: 0;
 
 
+}
+
+.box-container img{
+   display: block;
+   padding-left: 20px;
 }
