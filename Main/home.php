@@ -34,7 +34,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <a href="#" class="logo"> <img src="image/partpicker.png"></a>
 
         <nav class="navbar">
-            <a href="home.html">home</a>
+            <a href="home.php">home</a>
             <a href="#builder">builder</a>
             <div class="dropdown">
                 <button class="dropbtn"><a>Browse Products <i class="fa-solid fa-caret-down"></i></button></a>
