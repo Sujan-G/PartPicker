@@ -31,7 +31,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     <header class="header">
 
-        <a href="#" class="logo"> <img src="https://cdna.pcpartpicker.com/static/forever/img/pcpp-logo.svg"></a>
+        <a href="#" class="logo"> <img src="image/partpicker.png"></a>
 
         <nav class="navbar">
             <a href="home.html">home</a>
