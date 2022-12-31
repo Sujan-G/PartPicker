@@ -873,3 +873,30 @@ hr {
 }
 
 
+.login-status{
+  
+    color:#f6831e;
+    padding-left: 25%;
+    
+}
+
+.login-status a{
+    color: #fff;
+    font-size: 3rem;
+}
+
+
+.login-status a:hover{
+   color:#f6831e;
+}
+
+.fa-user{
+    color:#fff;
+    font-size: 3rem;
+
+}
+
+.fa-user:hover{
+    color:#f6831e;
+}
+
