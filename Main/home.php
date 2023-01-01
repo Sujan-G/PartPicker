@@ -219,7 +219,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </div>
 
 
-    <section class="features" id="features">
+    <!-- <section class="features" id="features">
 
         <div class="box-container">
 
@@ -251,7 +251,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <a href="#" class="btn">read more</a>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="footer" id="footer">
         <table>
             <tr>
