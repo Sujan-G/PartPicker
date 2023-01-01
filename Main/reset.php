@@ -49,6 +49,9 @@ $Repassword=md5($Repassword);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="reset.css">
+<div class="img">
+        <a href="login.php"><img src="image/partpicker.png" alt="logo"></a>
+    </div>
 <h1>Reset Password</h1>
 </head>
 <body>
@@ -60,7 +63,7 @@ $Repassword=md5($Repassword);
 				<input type="password" name="password" placeholder="Password"required><br>
 				<!-- <label for="password">Retype Password</label> -->
 				<input type="password" name="Repassword" placeholder="Retype Password" required><br>
-				<button type="submit" name="submit">Reset Password</button> <?php echo $Home; ?>
+				<button type="submit" name="submit">Submit</button> <?php echo $Home; ?>
 			</form>
 		</div>
 </body>
