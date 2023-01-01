@@ -31,10 +31,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     <header class="header">
 
-        <a href="home.php" class="logo"> <img src="image\partpicker.png"></a>
+        <a href="#" class="logo"> <img src="image/partpicker.png"></a>
 
         <nav class="navbar">
-            <a href="home.html">home</a>
+            <a href="home.php">home</a>
             <a href="#builder">builder</a>
             <div class="dropdown">
                 <button class="dropbtn"><a>Browse Products <i class="fa-solid fa-caret-down"></i></button></a>
@@ -112,7 +112,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
             <a href="#benchmarks">Benchmarks</a>
         </nav>
-
+        
         <div class="login-status">
         
         <a href="profile.html">
@@ -121,17 +121,20 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
        </a>
 </div>
 
+
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn"></div>
-            <a href="logout.php"> <div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn"></div></a>
+            <a href="logout.php"><div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn"></div></a>
         </div>
         <form action="" class="search-form">
             <input type="search" id="search-box" placeholder="search here...">
             <label for="search-box" class="fas fa-search"></label>
         </form>
-       </header>
+
+
+    </header>
     <br><br><br>
     <!-- Slideshow container -->
     <div class="slideshow-container">
@@ -156,9 +159,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     </button>
                 </a>
             </div>
-            <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4090/geforce-rtx-4090-100vp-d.jpg"
+             <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4090/geforce-rtx-4090-100vp-d.jpg"
                 style="width:100%">
-            <div class="text"></div>
+               <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
@@ -217,7 +220,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-
 
     <section class="features" id="features">
 
@@ -303,7 +305,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </body>
 <?php 
 }else{
-     header("Location: login.php");
+     header("Location: index.php");
      exit();
 }
  ?>
