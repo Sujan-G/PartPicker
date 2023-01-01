@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width , initial-scale=1">
     <div class="img">
-        <a href="home.php"><img src="https://cdna.pcpartpicker.com/static/forever/img/pcpp-logo.svg" alt="logo"></a>
+        <a href="login.php"><img src="image/partpicker.png" alt="logo"></a>
     </div>
 </head>
 <title>login</title>
@@ -27,7 +27,11 @@
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="error"><?php echo $_GET['error']; ?></p>
                 <?php } ?>
-                <br>
+
+                <?php if (isset($_GET['success'])) { ?>
+                    <p class="success"><?php echo $_GET['success']; ?></p>
+                <?php } ?>
+                <!-- <br> -->
                 <input type="text" name="uname" placeholder=" User Name">
                 <p>
                 </p>

@@ -42,7 +42,7 @@
                     <input type="submit" value="Sign In">
                 </p>
             </form>
-            <a href="forgot.html">Forgot Password?</p></a>
+            <a href="forgot.php">Forgot Password?</p></a>
 
             <h4>Not a Member?</h4>
                 <a href='signup.php'>

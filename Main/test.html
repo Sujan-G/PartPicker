@@ -1,9 +1,3 @@
-<?php 
-session_start();
-
-if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
-
- ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +25,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     <header class="header">
 
-        <a href="home.php" class="logo"> <img src="image\partpicker.png"></a>
+        <a href="#" class="logo"> <img src="https://cdna.pcpartpicker.com/static/forever/img/pcpp-logo.svg"></a>
 
         <nav class="navbar">
             <a href="home.html">home</a>
@@ -113,25 +107,29 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <a href="#benchmarks">Benchmarks</a>
         </nav>
 
-        <div class="login-status">
-        
-        <a href="profile.html">
-        
-        <i class="fa-solid fa-user"> <?php echo "<styles>" .$_SESSION['user_name'];"</styles>" ?></i>
-       </a>
-</div>
-
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn"></div>
-            <a href="logout.php"> <div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn"></div></a>
+            <div class="fas fa-user" id="login-btn"></div>
         </div>
         <form action="" class="search-form">
             <input type="search" id="search-box" placeholder="search here...">
             <label for="search-box" class="fas fa-search"></label>
         </form>
-       </header>
+
+
+        <form action="" class="login-form">
+            <h3>Login</h3>
+            <input type="email" placeholder="Email ID" class="box" required>
+            <input type="password" placeholder="Password" class="box" required>
+            <input type="submit" value="Sign In" class="btn">
+            <p></p>
+            <p>Forgot Password? <a href="forgot.html">click here</a></p>
+            <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+
+        </form>
+    </header>
     <br><br><br>
     <!-- Slideshow container -->
     <div class="slideshow-container">
@@ -224,87 +222,41 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <div class="box-container">
 
             <div class="box">
-
-                <h3>Entry Level AMD Build</h3>
+                <img src="image/feature-img-1.png" alt="">
+                
+                <h1>Build Guides</h1>
                 <p>
-                    AMD Ryzen 5 5600G
-                    Cooler Master MasterBox Q300L MicroATX Mini Tower</p>
-                <img src="image\entry-lvl.png"><br>
+                    Building your own PC and need ideas on where to get started? Explore our build guides which
+                    cover systems for a variety of use-cases and budgets.</p>
                 <a href="#" class="btn">read more</a>
             </div>
+
             <div class="box">
-
-                <h3>Entry Level AMD Build</h3>
-                <p>
-                    AMD Ryzen 5 5600G
-                    Cooler Master MasterBox Q300L MicroATX Mini Tower</p>
-                <img src="image/entry-lvl.png"><br>
+                <img src="image/feature-img-2.png" alt="">
+                <h3>free delivery</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
                 <a href="#" class="btn">read more</a>
             </div>
+
             <div class="box">
-
-                <h3>Entry Level AMD Build</h3>
-                <p>
-                    AMD Ryzen 5 5600G
-                    Cooler Master MasterBox Q300L MicroATX Mini Tower</p>
-                <img src="image/entry-lvl.png"><br>
+                <img src="image/feature-img-3.png" alt="">
+                <h3>easy payments</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
                 <a href="#" class="btn">read more</a>
             </div>
+
         </div>
+
     </section>
-    <section class="footer" id="footer">
-        <table>
-            <tr>
-                <td>
-                    <div class="f1">
-                        <img src="image/logo.png">
-                        <br>
-                        <p>
-                            PICK PARTS.<br>
-                            BUILD YOUR PC.<br>
-                            COMPARE AND SHARE.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    <div class="f2">
-                        <center><h1>Catergories</h1><center>
-                        <hr>
-                        <br>
-                        <center>
-                        <p>
-                            <a href="#">Builder</a><br>
-                            <a href="#">Browse Products</a><br>
-                            <a href="#">Benchmarks</a>                           
-                        </p>
-                        </center>
-                    </div>
-                </td>
-                <td>
-                    <div class="f2">
-                        <center><h1>Company</h1><center>
-                        <hr>
-                        <br>
-                        <center>
-                        <p>
-                            <a href="about.html">About</a><br>
-                            <a href="contact.html">Contact Us</a><br>
-                            <a href="#">User Code Of Conduct</a>
-                        </p>
-                        </center>
-                    </div>
-                </td>
-            </tr>
-        </table>
+
     </section>
+
+
+
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
     <!-- custom js file link  -->
     <script src="script.js"></script>
 </body>
-<?php 
-}else{
-     header("Location: login.php");
-     exit();
-}
- ?>
+
 </html>

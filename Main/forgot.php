@@ -29,21 +29,32 @@ if (isset($_POST['submit'])) {
         $token=$userdata['token'];
         $subject="Password Reset";
         $body="Hi, $username. Click on this link to reset your password
-        http://localhost/test/Main/reset.php?token=$token ";
+        http://localhost/Project/Main/reset.php?token=$token";
         $sendermail="From: project4dsi@gmail.com";
         if(mail($email, $subject, $body, $sendermail)){
            $_SESSION['msg']="check your Mail"&$email;
-           header('location:login.php');
-        }else{
+           header('location:login.php?success=Link to Reset Your Password Has been Sent To  Your Mail');
+        }else
+        {
             echo "Failed to send Email....";
         }
         }
+        else
+        {
+            header("Location:forgot.php?error=Email Not Found");
+
+          
+        }
     }
+   
 ?>
     <div class="forgot">
         <center>
             <h2>Enter your Email</h2>
             <hr>
+            <?php if (isset($_GET['error'])) { ?>
+                    <p class="error"><?php echo $_GET['error']; ?></p>
+                <?php } ?>
             <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
                 <p>
                     <input type="email" name="email" placeholder=" Email" required>

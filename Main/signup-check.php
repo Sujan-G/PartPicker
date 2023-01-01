@@ -21,20 +21,16 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 	$user_data = 'uname='. $uname. '&email='. $email;
 
 
-	if (empty($uname)) {
+	if(empty($email)){
+        header("Location: signup.php?error=Email is required&$user_data");
+	    exit();
+     }
+	 else if (empty($uname)) {
 		header("Location: signup.php?error=User Name is required&$user_data");
 	    exit();
-	}else if(empty($pass)){
+	}
+	else if(empty($pass)){
         header("Location: signup.php?error=Password is required&$user_data");
-	    exit();
-	}
-	else if(empty($re_pass)){
-        header("Location: signup.php?error=Re Password is required&$user_data");
-	    exit();
-	}
-
-	else if(empty($email)){
-        header("Location: signup.php?error=Email is required&$user_data");
 	    exit();
 	}
 
@@ -42,6 +38,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])
         header("Location: signup.php?error=The confirmation password  does not match&$user_data");
 	    exit();
 	}
+
 
 	else{
 
