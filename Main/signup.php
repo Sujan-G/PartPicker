@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width , initial-scale=1">
     <div class="img">
-       <img src="https://cdna.pcpartpicker.com/static/forever/img/pcpp-logo.svg" alt="logo">
+    <img src="image/partpicker.png" alt="logo">
     </div>
 	<title>SIGN UP</title>
 	<link rel="stylesheet" type="text/css" href="signup.css">
