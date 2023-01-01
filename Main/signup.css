@@ -1,11 +1,23 @@
  .success {
     background: #D4EDDA;
     color: #40754C;
-    padding: 10px;
+    padding: 11px;
     width: 95%;
     border-radius: 5px;
     margin: 20px auto;
  }
+
+
+ .error {
+   background: #F2DEDE;
+   color: #c84846;
+   padding: 11px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+   font-weight: 450;
+}
+
  h1,section{
    text-align: center;
 }

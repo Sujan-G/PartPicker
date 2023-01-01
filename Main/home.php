@@ -117,7 +117,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         
         <a href="profile.html">
         
-        <i class="fa-solid fa-user"> <?php echo "<styles>" .$_SESSION['name'];"</styles>" ?></i>
+        <i class="fa-solid fa-user"> <?php echo "<styles>" .$_SESSION['user_name'];"</styles>" ?></i>
        </a>
 </div>
 
@@ -126,7 +126,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <div class="fas fa-bars" id="menu-btn"></div>
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn"></div>
-            <a href="logout.php"><div class="fa-solid fa-arrow-right-from-bracket" id="login-btn"></div></a>
+            <a href="logout.php"><div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn"></div></a>
         </div>
         <form action="" class="search-form">
             <input type="search" id="search-box" placeholder="search here...">

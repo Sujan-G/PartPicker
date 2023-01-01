@@ -25,11 +25,11 @@
           <?php } ?>
 
          
-          <?php if (isset($_GET['name'])) { ?>
-               <input type="text" name="name" placeholder="Name"
-                      value="<?php echo $_GET['name']; ?>"><br>
+          <?php if (isset($_GET['email'])) { ?>
+               <input type="email" name="email" placeholder="Email"
+                      value="<?php echo $_GET['email']; ?>"><br>
           <?php }else{ ?>
-               <input type="text" name="name" placeholder="Name"><br>
+               <input type="email" name="email" placeholder="Email"><br>
           <?php }?>
 
          
@@ -50,7 +50,7 @@
           
           <input type="password" 
                  name="re_password" 
-                 placeholder="Re_Password"><br>
+                 placeholder="Confirm Password"><br>
 
      	<button type="submit">Sign Up</button>
           <br>
