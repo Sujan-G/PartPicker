@@ -48,6 +48,8 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 		// hashing the password
         $pass = md5($pass);
 
+		//token
+		$token=str_rand();
 	    $sql = "SELECT * FROM users WHERE user_name='$uname' ";
 		$result = mysqli_query($conn, $sql);
 
@@ -71,3 +73,11 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 	header("Location: signup.php");
 	exit();
 }
+
+    function str_rand(int $length = 64){ // 64 = 32
+        $length = ($length < 4) ? 4 : $length;
+        return bin2hex(random_bytes(($length-($length%2))/2));
+    }
+   
+    var_dump(str_rand());
+    // d6199909d0b5fdc22c9db625e4edf0d6da2b113b21878cde19e96f4afe69e714
