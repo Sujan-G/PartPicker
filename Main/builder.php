@@ -25,6 +25,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0469953560.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Home Page</title>
 </head>
 
@@ -253,6 +254,113 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </table>
 </section>
 <input type="buttonclear" class="btn btn-sm btn-danger" id="btn-clear-ls" value="Clear build" />
+      
+    <section class="ss">
+    <table id="build" class="table table-light table-striped table-bordered table-hover ">
+<thead class="thead-dark">
+<tr>
+<th>Category</th>
+<th>Selection</th>
+<th>Source</th>
+<th>Price</th>
+<th>Add/Delete</th>
+</tr>
+</thead>
+<tbody>
+<tr id="processor">
+<td class="category lead">Processor</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="motherboard">
+<td class="category lead">Motherboard</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="gpu">
+<td class="category lead">Graphic Card</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="psu">
+<td class="category lead">Power Supply</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="cabinet">
+<td class="category lead">Cabinet</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="memory">
+<td class="category lead">Memory (RAM)</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="memory2">
+<td class="category lead">Additional Memory (RAM)</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="hdd">
+<td class="category lead">Hard disk drive (HDD)</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="ssd">
+<td class="category lead">Solid State Disk (SSD)</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="monitor">
+<td class="category lead">Monitor</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="monitor2">
+<td class="category lead">Additional Monitor</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="cooler">
+<td class="category lead">CPU cooler</td>
+<td class="selection"></td>
+<td class="source"></td>
+<td class="price text-right"></td>
+<td class="ref"></td>
+</tr>
+<tr id="totals">
+<td></td>
+<td></td>
+<td><strong>Grand Total</strong></td>
+<td class="price text-right"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
       
     <br><br><br>
        <section class="footer" id="footer">
