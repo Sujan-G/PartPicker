@@ -71,8 +71,8 @@ if(isset($_POST['submit'])) {
 				<!-- <label for="password">Password</label> -->
 				<input type="password" name="password" placeholder="Password"><br>
 				<!-- <label for="password">Retype Password</label> -->
-				<input type="password" name="Repassword" placeholder="Retype Password" ><br>
-				<button type="submit" name="submit">Submit</button> <?php echo $Home; ?>
+				<input type="password" name="Repassword" placeholder="Retype Password" required><br>
+				<button type="submit" name="submit">Reset Password</button> <?php echo $Home; ?>
 			</form>
 		</div>
 </body>
