@@ -19,6 +19,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleshome.css">
+    <link rel="stylesheet" href="slider.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
@@ -30,40 +31,40 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     <header class="header">
 
-        <a href="#" class="logo"> <img src="image/partpicker.png"></a>
+        <a href="home.php" class="logo"> <img src="image\partpicker.png"></a>
 
         <nav class="navbar">
             <a href="home.php">home</a>
-            <a href="#builder">builder</a>
+            <a href="builder.php">builder</a>
             <div class="dropdown">
-                <button class="dropbtn">Browse Products <i class="fa-solid fa-caret-down"></i></button>
+                <button class="dropbtn"><a>Browse Products <i class="fa-solid fa-caret-down"></i></button></a>
                 <div class="dropdown-content">
                     <table>
                         <tr>
                             <td>
                                 <div class="gallery">
-                                    <a target="_blank" href="cpu.html">
+                                    <a target="_blank" href="cpu.php">
                                         <img src="image/nav-cpu.png" width="100" height="100">
                                     </a>
                                     <div class="desc">CPU</div>
                                 </div>
                             <td>
                                 <div class="gallery">
-                                    <a target="_blank" href="memory.html">
+                                    <a target="_blank" href="memory.php">
                                         <img src="image/nav-memory.png" width="100" height="100">
                                     </a>
                                     <div class="desc">Memory</div>
                                 </div>
                             <td>
                                 <div class="gallery">
-                                    <a target="_blank" href="cpucooler.html">
+                                    <a target="_blank" href="cpucooler.php">
                                         <img src="image/nav-cpucooler.png" width="100" height="100">
                                     </a>
                                     <div class="desc">CPU Cooler</div>
                                 </div>
                             <td>
                                 <div class="gallery">
-                                    <a target="_blank" href="motherboard.html">
+                                    <a target="_blank" href="motherboard.php">
                                         <img src="image/nav-motherboard.png" width="100" height="100">
                                     </a>
                                     <div class="desc">Motherboard</div>
@@ -73,7 +74,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <tr>
                     <td>
                         <div class="gallery">
-                            <a target="_blank" href="storage.html">
+                            <a target="_blank" href="storage.php">
                                 <img src="image/nav-ssd.png" width="100" height="100">
                             </a>
                             <div class="desc">Storage</div>
@@ -81,7 +82,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <td>
 
                         <div class="gallery">
-                            <a target="_blank" href="videocard.html">
+                            <a target="_blank" href="videocard.php">
                                 <img src="image/nav-videocard.png" width="100" height="100">
                             </a>
                             <div class="desc">Graphics Card</div>
@@ -89,7 +90,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     </td>
                     <td>
                         <div class="gallery">
-                            <a target="_blank" href="powersupply.html">
+                            <a target="_blank" href="powersupply.php">
                                 <img src="image/nav-powersupply.png" width="100" height="100">
                             </a>
                             <div class="desc">Power Supply</div>
@@ -97,7 +98,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     </td>
                     <td>
                         <div class="gallery">
-                            <a target="_blank" href="case.html">
+                            <a target="_blank" href="case.php">
                                 <img src="image/nav-case.png" width="100" height="100">
                             </a>
                             <div class="desc">Cabinet</div>
@@ -107,42 +108,81 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
             </div>
 
-            </div>
-
             <a href="#benchmarks">Benchmarks</a>
         </nav>
-         <div class="login-status">
-        <a href="profile.php">
+
+        <div class="login-status">
+        
+        <a href="profile.html">
         
         <i class="fa-solid fa-user"> <?php echo "<styles>" .$_SESSION['user_name'];"</styles>" ?></i>
        </a>
 </div>
 
         <div class="icons">
-       
             <div class="fas fa-bars" id="menu-btn"></div>
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn"></div>
             <a href="logout.php"> <div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn"></div></a>
         </div>
-        </div>
         <form action="" class="search-form">
             <input type="search" id="search-box" placeholder="search here...">
             <label for="search-box" class="fas fa-search"></label>
         </form>
-
-
-    </header>
-    <section class="parts" id="parts">
+       </header>
+       <section class="parts" id="parts">
         <div class="content">
             <h3>Choose a CPU</h3>
         </div>
-
+      
     </section>
-
-
+    <br><br><br>
+       <section class="footer" id="footer">
+        <table>
+            <tr>
+                <td>
+                    <div class="f1">
+                        <img src="image/logo.png">
+                        <br>
+                        <p>
+                            PICK PARTS.<br>
+                            BUILD YOUR PC.<br>
+                            COMPARE AND SHARE.
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="f2">
+                        <center><h1>Catergories</h1><center>
+                        <hr>
+                        <br>
+                        <center>
+                        <p>
+                            <a href="Builder.php">Builder</a><br>
+                            <a href="Builder.php">Browse Products</a><br>
+                            <a href="Builder.php">Benchmarks</a>                           
+                        </p>
+                        </center>
+                    </div>
+                </td>
+                <td>
+                    <div class="f2">
+                        <center><h1>Company</h1><center>
+                        <hr>
+                        <br>
+                        <center>
+                        <p>
+                            <a href="about.html">About</a><br>
+                            <a href="contact.html">Contact Us</a><br>
+                            <a href="#">User Code Of Conduct</a>
+                        </p>
+                        </center>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
     <!-- custom js file link  -->
     <script src="script.js"></script>
 </body>
