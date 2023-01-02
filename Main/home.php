@@ -70,7 +70,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <div class="desc">Motherboard</div>
                                 </div>
                             <td>
-                </div>
+                
                 <tr>
                     <td>
                         <div class="gallery">
@@ -105,6 +105,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         </div>
                     </td>
                     </table>
+                    </div>
 
             </div>
 

@@ -18,7 +18,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styleshome.css">
+    <link rel="stylesheet" href="builder.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <div class="desc">Motherboard</div>
                                 </div>
                             <td>
-                </div>
+                
                 <tr>
                     <td>
                         <div class="gallery">
@@ -105,6 +105,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         </div>
                     </td>
                     </table>
+                    </div>
 
             </div>
 
@@ -135,8 +136,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <h3>Choose Your Parts</h3>
         </div>
 </section>
-<section class="builder" id="builder">
-   <center><table id="build" class="table table-light table-striped table-bordered table-hover" style="width:100%">
+<section class="builder">
+   <center><table class="table table-dark table-striped table-bordered table-hover ">
 <thead class="thead-dark">
 <tr>
 <th>Category</th>
@@ -152,84 +153,77 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Processor</button></td>
 </tr>
 <tr id="motherboard">
 <td class="category lead">Motherboard</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Motherboard</button></td>
 </tr>
 <tr id="gpu">
 <td class="category lead">Graphic Card</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Graphic Card</button></td>
 </tr>
 <tr id="psu">
 <td class="category lead">Power Supply</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Power Supply</button></td>
 </tr>
 <tr id="cabinet">
 <td class="category lead">Cabinet</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Cabinet</button></td>
 </tr>
 <tr id="memory">
 <td class="category lead">Memory (RAM)</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Memory</button></td>
 </tr>
 <tr id="memory2">
 <td class="category lead">Additional Memory (RAM)</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Memory</button></td>
 </tr>
 <tr id="hdd">
 <td class="category lead">Hard disk drive (HDD)</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Hard disk</button></td>
 </tr>
 <tr id="ssd">
 <td class="category lead">Solid State Disk (SSD)</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add SSD</button></td>
 </tr>
 <tr id="monitor">
 <td class="category lead">Monitor</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
-</tr>
-<tr id="monitor2">
-<td class="category lead">Additional Monitor</td>
-<td class="selection"></td>
-<td class="source"></td>
-<td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Monitor</button></td>
 </tr>
 <tr id="cooler">
 <td class="category lead">CPU cooler</td>
 <td class="selection"></td>
 <td class="source"></td>
 <td class="price text-right"></td>
-<td class="ref"></td>
+<td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Cpu Cooler</button></td>
 </tr>
 <tr id="totals">
 <td></td>
@@ -241,8 +235,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </tbody>
 </table>
 </center>
-<input type="buttonclear" class="btn btn-sm btn-danger" id="btn-clear-ls" value="Clear Build" style="width:10rem; height:3rem">
-<input type="button" class="btn btn-sm btn-primary " id="btn-copy-markup" value="Save Build" style="width:10rem; height:3rem">
+   <button class="clearbuild">Clear Build</button>
+   <button class="savebuild">Save Build</button>
 </section>   
        <section class="footer" id="footer">
         <table>
