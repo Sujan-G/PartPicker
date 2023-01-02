@@ -43,28 +43,28 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         <tr>
                             <td>
                                 <div class="gallery">
-                                    <a target="_blank" href="cpu.html">
+                                    <a target="_blank" href="cpu.php">
                                         <img src="image/nav-cpu.png" width="100" height="100">
                                     </a>
                                     <div class="desc">CPU</div>
                                 </div>
                             <td>
                                 <div class="gallery">
-                                    <a target="_blank" href="memory.html">
+                                    <a target="_blank" href="memory.php">
                                         <img src="image/nav-memory.png" width="100" height="100">
                                     </a>
                                     <div class="desc">Memory</div>
                                 </div>
                             <td>
                                 <div class="gallery">
-                                    <a target="_blank" href="cpucooler.html">
+                                    <a target="_blank" href="cpucooler.php">
                                         <img src="image/nav-cpucooler.png" width="100" height="100">
                                     </a>
                                     <div class="desc">CPU Cooler</div>
                                 </div>
                             <td>
                                 <div class="gallery">
-                                    <a target="_blank" href="motherboard.html">
+                                    <a target="_blank" href="motherboard.php">
                                         <img src="image/nav-motherboard.png" width="100" height="100">
                                     </a>
                                     <div class="desc">Motherboard</div>
@@ -74,7 +74,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <tr>
                     <td>
                         <div class="gallery">
-                            <a target="_blank" href="storage.html">
+                            <a target="_blank" href="storage.php">
                                 <img src="image/nav-ssd.png" width="100" height="100">
                             </a>
                             <div class="desc">Storage</div>
@@ -82,7 +82,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <td>
 
                         <div class="gallery">
-                            <a target="_blank" href="videocard.html">
+                            <a target="_blank" href="videocard.php">
                                 <img src="image/nav-videocard.png" width="100" height="100">
                             </a>
                             <div class="desc">Graphics Card</div>
@@ -90,7 +90,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     </td>
                     <td>
                         <div class="gallery">
-                            <a target="_blank" href="powersupply.html">
+                            <a target="_blank" href="powersupply.php">
                                 <img src="image/nav-powersupply.png" width="100" height="100">
                             </a>
                             <div class="desc">Power Supply</div>
@@ -98,7 +98,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     </td>
                     <td>
                         <div class="gallery">
-                            <a target="_blank" href="case.html">
+                            <a target="_blank" href="case.php">
                                 <img src="image/nav-case.png" width="100" height="100">
                             </a>
                             <div class="desc">Cabinet</div>
@@ -219,7 +219,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </div>
 
 
-    <section class="features" id="features">
+    <!-- <section class="features" id="features">
 
         <div class="box-container">
 
@@ -251,7 +251,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <a href="#" class="btn">read more</a>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="footer" id="footer">
         <table>
             <tr>

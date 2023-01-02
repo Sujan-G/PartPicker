@@ -1,40 +1,49 @@
 <?php include('db_conn.php');
 session_start();
 ob_start();
-$emailquery="SELECT * From users";
-$query=mysqli_query($conn,$emailquery);
+$tokenquery="SELECT * From users";
+$query=mysqli_query($conn,$tokenquery);
 $userdata=mysqli_fetch_array($query);
-$token=$userdata['token'];
-$id = $_GET['token'];
+$token = $_GET['token'];
 $message = $Home = '';
-$_SESSION['user'] = $id;
-if ($_SESSION['user'] == '') {
+if ($token == " ") {
     header("location:reset.php");
 }
 else
 {
 
+	
 if(isset($_POST['submit'])) {
 	
+    
+
     $password = $_POST['password'];
 	$Repassword = $_POST['Repassword'];
 
-
-	if ($password !== $Repassword) {
-		$message = "<div class='alert alert-danger'>Password Not Match..!!</div>";
+	if (empty($password)) {
+		$message = "<div class='alert alert-danger'>Password Cannot be Empty..!!</div>";
 	}
+    
 	else{
+		if ($password !== $Repassword) {
+			$message = "<div class='alert alert-danger'>Password Not Match..!!</div>";
+		}
+	
+	
+	else{
+		
         $password=md5($password);
-$Repassword=md5($Repassword);
-	$query = "UPDATE users SET password = '$password' WHERE token = '$id' ";
-	$result = $conn->query($query);
+       $Repassword=md5($Repassword);
+	   $query = "UPDATE users SET password = '$password' WHERE token = '$token' ";
+	   $result = $conn->query($query);
 		if($result){
 			$message = "<div class='alert alert-success'>Reset Your Password Successfully..</div>";
-			$Home = "<a href='login.php' class='btn btn-success btn-sm'>Login</a>";
+			$Home = "<a href='login.php' class='btn btn-success btn-lg'>Login</a>";
 	}else{
 		$message = "<div class='alert alert-danger'>Failed to Reset Password..!!</div>";
 	}
 	}
+}
 }
 }
 ?>
@@ -49,6 +58,9 @@ $Repassword=md5($Repassword);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="reset.css">
+<div class="img">
+        <a href="login.php"><img src="image/partpicker.png" alt="logo"></a>
+    </div>
 <h1>Reset Password</h1>
 </head>
 <body>
@@ -57,10 +69,10 @@ $Repassword=md5($Repassword);
 				<?php echo $message; ?>
 				
 				<!-- <label for="password">Password</label> -->
-				<input type="password" name="password" placeholder="Password"required><br>
+				<input type="password" name="password" placeholder="Password"><br>
 				<!-- <label for="password">Retype Password</label> -->
-				<input type="password" name="Repassword" placeholder="Retype Password" required><br>
-				<button type="submit" name="submit">Reset Password</button> <?php echo $Home; ?>
+				<input type="password" name="Repassword" placeholder="Retype Password" ><br>
+				<button type="submit" name="submit">Submit</button> <?php echo $Home; ?>
 			</form>
 		</div>
 </body>

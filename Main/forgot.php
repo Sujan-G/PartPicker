@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
         }
         else
         {
-            header("Location:forgot.php?error=Email Not Found");
+            header("Location:forgot.php?error=Email Required");
 
           
         }
@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
                 <?php } ?>
             <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
                 <p>
-                    <input type="email" name="email" placeholder=" Email" required>
+                    <input type="email" name="email" placeholder=" Email">
                 </p>
                 <input type="submit" name="submit" value="RESET PASSWORD">  
             </form>
