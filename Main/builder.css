@@ -197,12 +197,12 @@ body {
 .parts {
     display: flex;
     justify-content: center;
-    background-color:#b2b2b4;
+    background-color:black;
 }
 
 .parts .content h3 {
     font-size: 3rem;
-    color: rgb(0, 0, 0);
+   color:white;
     font-family: 'Chivo Mono', monospace;
     font-family: 'Inter', sans-serif;
     align-items: center;
@@ -404,13 +404,6 @@ hr {
     border-radius: 5px;
     margin: 20px auto;
  }
-
-.content h3 {
-    font-size: 3rem;
-    font-family: 'Chivo Mono', monospace;
-    font-family: 'Inter', sans-serif;
-    padding-top: 18%;
-}
 
 .builder tr td {
         width:130px;
