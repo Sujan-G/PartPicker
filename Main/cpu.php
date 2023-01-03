@@ -12,18 +12,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width , initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styleshome.css">
-    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="cpu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0469953560.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>CPUs</title>
 </head>
 
@@ -134,9 +128,45 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <div class="content">
             <h3>Choose a CPU</h3>
         </div>
-      
-    </section>
-    <br><br><br>
+      </section>
+    <section class="cpu">
+    <center><table class="table table-light table-striped table-bordered">
+<thead class="thead-dark">
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Selection</th>
+</tr>
+</thead>
+<tbody>
+<tr id="Product">
+<td class="product"></td>
+<td class="selection"></td>
+<td class="source"></td>
+</tr>
+<tr id="Product">
+<td class="product"></td>
+<td class="selection"></td>
+<td class="source"></td>
+</tr>
+<tr id="Product">
+<td class="product"></td>
+<td class="selection"></td>
+<td class="source"></td>
+</tr>
+<tr id="Product">
+<td class="product"></td>
+<td class="selection"></td>
+<td class="source"></td>
+</tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</center>
        <section class="footer" id="footer">
         <table>
             <tr>
