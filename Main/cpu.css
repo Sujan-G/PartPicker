@@ -203,7 +203,9 @@ table .tr .td{
 .parts {
     display: flex;
     justify-content: center;
-    background-color:#191b2a;
+    background-color:#272a42;
+    margin-left: 4%;
+    margin-right: 6%;
 }
 
 .parts .content h3 {
@@ -310,7 +312,7 @@ div.desc {
     color: whitesmoke;
 }
 .cpu tr td {
-    width:300px;
+    width:100px;
     text-align:center;
     border:1px solid rgb(205, 199, 199);
     padding:3rem;
@@ -320,6 +322,9 @@ div.desc {
 
 .cpu{
     margin: 0;
+    width: 90%;
+    margin-left: 4%;
+    margin-right: 5%;
 }
 
 .cpu th{
@@ -327,14 +332,6 @@ div.desc {
     font-size: 18px;
 }
 
-hr {
-    /* background-color: black; */
-    height: 0.8px;
-    width: 85%;
-    margin-top: 0;
-
-
-}
 
 .footer {
     background:#191b2a;;
