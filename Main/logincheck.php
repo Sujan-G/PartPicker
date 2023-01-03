@@ -20,8 +20,8 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 	   $data = htmlspecialchars($data);
 	   return $data;
 	}
-    $admin="admin";
-    $adminpass="0192023a7bbd73250516f069df18b500";
+    $admin=validate("admin");
+    $adminpass=validate("0192023a7bbd73250516f069df18b500");
 	$uname = validate($_POST['uname']);
 	$pass = validate($_POST['password']);
 	if ($uname == "admin" && $pass == "admin123")
@@ -51,7 +51,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
 			if ($row['user_name'] === $admin && $row['password'] === $adminpass)
 			{
-			header("Location:signup.php");
+			header("Location: admin.php");
 			exit();
 			}
             else if ($row['user_name'] === $uname && $row['password'] === $pass) {
