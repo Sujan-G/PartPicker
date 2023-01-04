@@ -143,77 +143,77 @@
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Processor</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Processor</button></td>
                   </tr>
                   <tr id="motherboard">
                      <td class="category lead">Motherboard</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Motherboard</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Motherboard</button></td>
                   </tr>
                   <tr id="gpu">
                      <td class="category lead">Graphics Card</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Graphic Card</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Graphic Card</button></td>
                   </tr>
                   <tr id="psu">
                      <td class="category lead">Power Supply</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Power Supply</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Power Supply</button></td>
                   </tr>
                   <tr id="cabinet">
                      <td class="category lead">Cabinet</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Cabinet</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Cabinet</button></td>
                   </tr>
                   <tr id="memory">
                      <td class="category lead">Memory (RAM)</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Memory</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Memory</button></td>
                   </tr>
                   <tr id="memory2">
                      <td class="category lead">Additional Memory (RAM)</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Memory</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Memory</button></td>
                   </tr>
                   <tr id="hdd">
                      <td class="category lead">Hard disk drive (HDD)</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Hard disk</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Hard disk</button></td>
                   </tr>
                   <tr id="ssd">
                      <td class="category lead">Solid State Disk (SSD)</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add SSD</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add SSD</button></td>
                   </tr>
                   <tr id="monitor">
                      <td class="category lead">Monitor</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Monitor</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Monitor</button></td>
                   </tr>
                   <tr id="cooler">
                      <td class="category lead">CPU cooler</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Cpu Cooler</button></td>
+                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Cpu Cooler</button></td>
                   </tr>
                   <tr id="totals">
                      <td></td>

@@ -65,6 +65,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 </div>
                             <td>
                 
+                
                 <tr>
                     <td>
                         <div class="gallery">
@@ -159,11 +160,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <td class="selection"></td>
 <td class="source"></td>
 </tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
+</center>
 </table>
 </center>
 </section>

@@ -197,7 +197,9 @@ body {
 .parts {
     display: flex;
     justify-content: center;
-    background-color:black;
+    background-color:#272a42;
+    margin-left: 4%;
+    margin-right: 6%;
 }
 
 .parts .content h3 {
@@ -415,7 +417,7 @@ hr {
 .builder tr td {
         width:130px;
         text-align:center;
-        border:0px solid rgb(237, 4, 4);
+        border:1px solid rgb(181, 176, 176);
         padding:2rem;
         font-size: 15px;
         font-weight: 450;
@@ -424,6 +426,9 @@ hr {
 
 .builder{
         margin: 0;
+        width: 90%;
+        margin-left: 4%;
+        margin-right: 5%;
 }
 
 
@@ -436,13 +441,14 @@ hr {
     border: var(--border);
     background-color: rgba(239, 52, 1, 0.947);
     color: #fff;
-    margin-left: 35%;
+    margin-left: 4%;
     width: 7%;
     padding-top: 8px;
     padding-bottom: 8px;
     text-align: center;
     font-weight: 600;
     border-radius: 3px;
+    font-size: 14px;
 }
 
 .clearbuild:hover{
@@ -453,7 +459,7 @@ hr {
     border: var(--border);
     background-color: rgba(63, 177, 35, 0.947);
     color: #fff;
-    margin-left: 4%;
+    margin-left: 1%;
     margin-bottom: 2%;
     width: 7%;
     padding-top: 8px;
@@ -461,6 +467,7 @@ hr {
     text-align: center;
     font-weight: 600;
     border-radius: 3px;
+    font-size: 14px;
 }
 
 .savebuild:hover{
