@@ -174,7 +174,13 @@ body {
     height: 10rem;
 }
 
+table {
+    background-color: #191b2a;
+}
 
+table .tr .td{
+    background-color: #d26a10;
+}
 
 
 .home .content {
@@ -197,12 +203,12 @@ body {
 .parts {
     display: flex;
     justify-content: center;
-    background-color:black;
+    background-color:#191b2a;
 }
 
 .parts .content h3 {
     font-size: 3rem;
-   color:white;
+    color: rgb(255, 255, 255);
     font-family: 'Chivo Mono', monospace;
     font-family: 'Inter', sans-serif;
     align-items: center;
@@ -303,21 +309,26 @@ div.desc {
     text-align: center;
     color: whitesmoke;
 }
-table {
-    background-color: #191b2a;
+.products tr td {
+    width:300px;
+    text-align:center;
+    border:1px solid rgb(205, 199, 199);
+    padding:3rem;
+    font-weight: 450;
+
 }
 
-table .tr .td{
-    background-color: #d26a10;
+.products{
+    margin: 0;
 }
 
-.builds h1 {
-    padding-left: 25px;
-    font-size: 2rem;
+.products th{
+    text-align: center;
+    font-size: 18px;
 }
 
 hr {
-    background-color: black;
+    /* background-color: black; */
     height: 0.8px;
     width: 85%;
     margin-top: 0;
@@ -410,59 +421,4 @@ hr {
     font-family: 'Chivo Mono', monospace;
     font-family: 'Inter', sans-serif;
     padding-top: 18%;
-}
-
-.builder tr td {
-        width:130px;
-        text-align:center;
-        border:0px solid rgb(237, 4, 4);
-        padding:2rem;
-        font-size: 15px;
-        font-weight: 450;
-
-    }
-
-.builder{
-        margin: 0;
-}
-
-
-.builder th{
-    text-align: center;
-    font-size: 18px;
-} 
- 
-.clearbuild{
-    border: var(--border);
-    background-color: rgba(239, 52, 1, 0.947);
-    color: #fff;
-    margin-left: 35%;
-    width: 7%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 3px;
-}
-
-.clearbuild:hover{
-    background-color: rgb(215, 38, 38);
-}
-
-.savebuild{
-    border: var(--border);
-    background-color: rgba(63, 177, 35, 0.947);
-    color: #fff;
-    margin-left: 4%;
-    margin-bottom: 2%;
-    width: 7%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 3px;
-}
-
-.savebuild:hover{
-    background-color: rgb(75, 141, 36);
 }

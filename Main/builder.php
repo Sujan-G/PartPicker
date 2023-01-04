@@ -153,7 +153,7 @@
                      <td class="ref"><button type="button" class="btn btn btn-primary btn-lg">Add Motherboard</button></td>
                   </tr>
                   <tr id="gpu">
-                     <td class="category lead">Graphic Card</td>
+                     <td class="category lead">Graphics Card</td>
                      <td class="selection"></td>
                      <td class="source"></td>
                      <td class="price text-right"></td>
@@ -223,10 +223,9 @@
                      <td></td>
                   </tr>
                </tbody>
-               </center>
             </table>
-         
-      </section>
+            </center>
+            </section>
       <button class="clearbuild">Clear Build</button>
       <button class="savebuild">Save Build</button>  
       <section class="footer" id="footer">

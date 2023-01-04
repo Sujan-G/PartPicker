@@ -18,7 +18,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0469953560.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>CPUs</title>
+    <title>Storage</title>
 </head>
 
 <body>
@@ -64,7 +64,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <div class="desc">Motherboard</div>
                                 </div>
                             <td>
-                
+               
                 <tr>
                     <td>
                         <div class="gallery">
@@ -126,7 +126,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
        </header>
        <section class="parts">
         <div class="content">
-            <h3>Choose a CPU</h3>
+            <h3>Choose Storage</h3>
         </div>
       </section>
     <section class="products">
