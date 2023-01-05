@@ -1,3 +1,4 @@
+<!-- Starting Php Session -->
 <?php 
 session_start(); 
 if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
@@ -223,4 +224,5 @@ Admin Panel
      exit();
 }
 ?>
+<!-- Ending php Session -->
 </html>

@@ -1,3 +1,4 @@
+<!-- Starting php session -->
 <?php 
 session_start();
 
@@ -30,12 +31,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <body>
 
     <header class="header">
-
+        <!-- making the logo link to the main home page -->
         <a href="home.php" class="logo"> <img src="image\partpicker.png"></a>
-
+        <!-- creating a navbar -->
         <nav class="navbar">
             <a href="home.php">home</a>
             <a href="builder.php">builder</a>
+            <!-- creating a drop down menu for all the products available -->
             <div class="dropdown">
                 <button class="dropbtn"><a>Browse Products <i class="fa-solid fa-caret-down"></i></button></a>
                 <div class="dropdown-content">
@@ -111,7 +113,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
             <a href="#benchmarks">Benchmarks</a>
         </nav>
-
+        <!-- Displaying User name at the top -->
         <div class="login-status">
         
         <a href="profile.html">
@@ -119,7 +121,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <i class="fa-solid fa-user"> <?php echo "<styles>" .$_SESSION['user_name'];"</styles>" ?></i>
        </a>
 </div>
-
+        <!-- Creating icons for cart,searchbar and logout -->
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
             <div class="fas fa-search" id="search-btn"></div>
@@ -252,6 +254,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </div>
     </section> -->
     <br>
+    <!-- Creating the bottom part of the home page -->
     <section class="footer" id="footer">
         <table>
             <tr>
@@ -307,4 +310,5 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
      exit();
 }
  ?>
+ <!-- Ending Php session -->
 </html>

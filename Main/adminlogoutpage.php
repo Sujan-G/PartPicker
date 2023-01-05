@@ -22,6 +22,7 @@
         <hr>
 
         <section>
+            <!-- Creating a login form  -->
             <form action="logincheck.php" method="post">
 
             <?php if (isset($_GET['error'])) { ?>
