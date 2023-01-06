@@ -77,4 +77,3 @@ if (isset($_POST['uname']) && isset($_POST['password'])
     }
    
     var_dump(str_rand());
-    // d6199909d0b5fdc22c9db625e4edf0d6da2b113b21878cde19e96f4afe69e714

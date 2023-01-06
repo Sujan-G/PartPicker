@@ -26,11 +26,28 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
 
     <!-- CSS Files -->
     <link id="pagestyle" href="./css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+
+    <!-- Alerify JS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
   </head>
   <style>
     .form-control {
       border: 1px solid #b3a1a1 !important;
       padding: 8px 10px;
+    }
+
+    .button {
+      background-color: #e91e63;
+      color: #fff;
+      font-weight: 430;
+      padding-right: 3%;
+      padding-left: 3%;
+      padding-bottom: 7px;
+      padding-top: 7px;
+      border-radius: 5px;
+      border-width: 0px;
+      margin-top: 6px;
     }
   </style>
 
@@ -65,20 +82,6 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
               </div>
 
               <span class="nav-link-text ms-1">Add Category</span>
-            </a>
-          </li>
-
-
-
-
-          <li class="nav-item">
-            <a class="nav-link text-white " href="./billing.html">
-
-              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10">receipt_long</i>
-              </div>
-
-              <span class="nav-link-text ms-1">Billing</span>
             </a>
           </li>
 
@@ -117,23 +120,23 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                   <div class="row">
                     <div class="col-md-8">
                       <label for="">Name</label>
-                      <input type="text" name="name" placeholder="Enter Category Name" class="form-control">
+                      <input type="text" name="name" placeholder="Enter Category Name" required class="form-control ">
                     </div>
-              
+
                     <div class="col-md-12">
                       <label for="">Description</label>
-                      <textarea rows="3" name="description" placeholder="Enter Description" class="form-control">
+                      <textarea rows="3" name="description" placeholder="Enter Description" required class="form-control">
                     </textarea>
                     </div>
 
                     <div class="col-md-12">
                       <label for="">Upload Image</label>
-                      <input type="file" name="image" class="form-control">
+                      <input type="file" name="image" required class="form-control">
                     </div>
 
                     <div class="col-md-12">
                       <label for="">Meta Title</label>
-                      <input type="text" name="meta_title" placeholder="Enter Meta Title" class="form-control">
+                      <input type="text" name="meta_title" required placeholder="Enter Meta Title" class="form-control">
                     </div>
 
                     <div class="col-md-6">
@@ -147,7 +150,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                     </div>
 
                     <div class="col-md-12">
-                      <button type="submit" class="btn-primary active bg-gradient-primary" name="add_category_btn">Save</button>
+                      <button type="submit" class="button" name="add_category_btn">Save</button>
                     </div>
 
                   </div>
@@ -159,7 +162,17 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
 
         </div>
       </div>
+      <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+      <script>
+        <?php if (isset($_SESSION['message'])) { ?>
 
+          alertify.set('notifier', 'position', 'top-right');
+          alertify.success('<?= $_SESSION['message'] ?>');
+        <?php
+          unset($_SESSION['message']);
+        }
+        ?>
+      </script>
   </body>
 <?php
 } else {
