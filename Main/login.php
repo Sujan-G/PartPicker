@@ -45,11 +45,11 @@
             <a href="forgot.php">Forgot Password?</p></a>
 
             <h4>Not a Member?</h4>
-                <a href='signup.php'>
-                    <button class="registerb">
-                        <b>Register Here</b>
-                    </button>
-                </a>
+            <a href='signup.php'>
+                <button class="registerb">
+                    <b>Register Here</b>
+                </button>
+            </a>
 
             </form>
 

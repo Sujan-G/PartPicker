@@ -178,7 +178,7 @@ table {
     background-color: #191b2a;
 }
 
-table .tr .td{
+table .tr .td {
     background-color: #d26a10;
 }
 
@@ -203,7 +203,7 @@ table .tr .td{
 .parts {
     display: flex;
     justify-content: center;
-    background-color:#272a42;
+    background-color: #272a42;
     margin-left: 4%;
     margin-right: 6%;
 }
@@ -218,8 +218,9 @@ table .tr .td{
     padding-top: 5%;
     font-weight: 550;
 }
-.features{
-    background-color:#666;
+
+.features {
+    background-color: #666;
 }
 
 .dropbtn {
@@ -311,96 +312,107 @@ div.desc {
     text-align: center;
     color: whitesmoke;
 }
+
 .cpu tr td {
-    width:100px;
-    text-align:center;
-    border:1px solid rgb(205, 199, 199);
-    padding:3rem;
+    width: 100px;
+    text-align: center;
+    border: 1px solid rgb(205, 199, 199);
+    padding: 3rem;
     font-weight: 450;
 
 }
 
-.cpu{
+.cpu {
     margin: 0;
     width: 90%;
     margin-left: 4%;
     margin-right: 5%;
 }
 
-.cpu th{
+.cpu th {
     text-align: center;
     font-size: 18px;
 }
 
 
 .footer {
-    background:#191b2a;;
+    background: #191b2a;
+    ;
     margin-top: 0;
 }
-.f1{
-    margin-top:6rem;
+
+.f1 {
+    margin-top: 6rem;
 }
-.f1 p{
+
+.f1 p {
     font-size: 2rem;
-    color:#fff;
+    color: #fff;
 }
-.f1 img{
+
+.f1 img {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
 }
-.f2{
-    margin-top:0rem;
+
+.f2 {
+    margin-top: 0rem;
     padding-left: 20rem;
     padding-bottom: 0rem;
 }
-.f2 h1{
+
+.f2 h1 {
     font-size: 5rem;
-    color:#fff;
+    color: #fff;
 }
-.f2 hr{
+
+.f2 hr {
     background-color: #fff;
-    height:0.8px;
-    width:100%;
-   }
-.f2 p{
+    height: 0.8px;
+    width: 100%;
+}
+
+.f2 p {
     font-size: 2rem;
-    color:#fff;
+    color: #fff;
 }
-.f2 a{
-    text-decoration:none;
-    color:aqua;
+
+.f2 a {
+    text-decoration: none;
+    color: aqua;
 }
-.f2 a:hover{
-    text-decoration:underline;
-    color:aqua;
+
+.f2 a:hover {
+    text-decoration: underline;
+    color: aqua;
 }
 
 
-.login-status{
-  
-    color:#f6831e;
+.login-status {
+
+    color: #f6831e;
     padding-left: 25%;
-    
+
 }
 
-.login-status a{
+.login-status a {
     color: #fff;
     font-size: 3rem;
 }
 
 
-.login-status a:hover{
-   color:#f6831e;
+.login-status a:hover {
+    color: #f6831e;
 }
 
-.fa-user{
-    color:#fff;
+.fa-user {
+    color: #fff;
     font-size: 3rem;
 
 }
 
-.fa-user:hover{
-    color:#f6831e;
+.fa-user:hover {
+    color: #f6831e;
 }
 
 
@@ -411,7 +423,7 @@ div.desc {
     width: 95%;
     border-radius: 5px;
     margin: 20px auto;
- }
+}
 
 .content h3 {
     font-size: 3rem;

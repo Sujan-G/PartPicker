@@ -419,13 +419,6 @@ button,
   -webkit-appearance: button;
 }
 
-button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
-  cursor: pointer;
-}
-
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -2773,20 +2766,6 @@ progress {
   opacity: 1;
 }
 
-.form-control::file-selector-button {
-  padding: 0.5rem 0;
-  margin: -0.5rem 0;
-  margin-inline-end: 0;
-  color: #495057;
-  background-color: transparent;
-  pointer-events: none;
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
-  border-inline-end-width: 1px;
-  border-radius: 0;
-  transition: all 0.15s ease-in;
-}
 
 @media (prefers-reduced-motion: reduce) {
   .form-control::file-selector-button {

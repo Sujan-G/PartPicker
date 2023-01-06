@@ -4,4 +4,4 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: logoutpage.php?error=Logout Success");?>
+header("Location: logoutpage.php?error=Logout Success");

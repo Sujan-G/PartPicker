@@ -79,10 +79,12 @@ body {
     text-decoration: none;
 
 }
+
 /*For menus in navbar which changes color on hover */
 .header .navbar a:hover {
     color: var(--orange);
 }
+
 /*For header icons */
 .header .icons div {
     height: 4.5rem;
@@ -96,6 +98,7 @@ body {
     cursor: pointer;
     text-align: center;
 }
+
 /*For header icons on hover */
 .header .icons div:hover {
     background: var(--orange);
@@ -105,6 +108,7 @@ body {
 #menu-btn {
     display: none;
 }
+
 /*For search form in header */
 .header .search-form {
     position: absolute;
@@ -119,11 +123,13 @@ body {
     align-items: center;
     box-shadow: var(--box-shadow);
 }
+
 /* Search for in header when the form is active */
 .header .search-form.active {
     right: 2rem;
     transition: .4s linear;
 }
+
 /* Box in search form */
 .header .search-form input {
     height: 100%;
@@ -134,6 +140,7 @@ body {
     color: var(--black);
     padding: 0 1.5rem;
 }
+
 /* Search form labels */
 .header .search-form label {
     font-size: 2.2rem;
@@ -141,10 +148,12 @@ body {
     color: var(--black);
     cursor: pointer;
 }
+
 /*Search form labels on hover */
 .header .search-form label:hover {
     color: var(--orange);
 }
+
 /* Shopping cart icon in header */
 .header .shopping-cart {
     position: absolute;
@@ -156,11 +165,13 @@ body {
     width: 35rem;
     background: #fff;
 }
+
 /* shopping cart icon in header when active */
 .header .shopping-cart.active {
     right: 2rem;
     transition: .4s linear;
 }
+
 /* Box in shopping cart */
 .header .shopping-cart .box {
     display: flex;
@@ -169,10 +180,12 @@ body {
     position: relative;
     margin: 1rem 0;
 }
+
 /* Size of the image in shoppingcart */
 .header .shopping-cart .box img {
     height: 10rem;
 }
+
 /* Data inside the home  */
 .home .content {
     text-align: center;
@@ -189,18 +202,19 @@ body {
 .home .content h3 span {
     color: var(--orange);
 }
+
 /* The parts in the table */
 .parts {
     display: flex;
     justify-content: center;
-    background-color:#272a42;
+    background-color: #272a42;
     margin-left: 4%;
     margin-right: 6%;
 }
 
 .parts .content h3 {
     font-size: 3rem;
-   color:white;
+    color: white;
     font-family: 'Chivo Mono', monospace;
     font-family: 'Inter', sans-serif;
     align-items: center;
@@ -208,10 +222,12 @@ body {
     padding-top: 5%;
     font-weight: 550;
 }
+
 /* Color for the background in features */
-.features{
-    background-color:#666;
+.features {
+    background-color: #666;
 }
+
 /* dropdown button */
 .dropbtn {
     background-color: transparent;
@@ -277,6 +293,7 @@ body {
 .dropdown:hover a {
     color: #ff7800;
 }
+
 /* The image gallery */
 div.gallery {
     margin: 5px;
@@ -285,16 +302,19 @@ div.gallery {
     width: 173px;
     background-color: transparent;
 }
+
 /* The image gallery on hover*/
 div.gallery:hover {
     border: none;
     background-color: rgb(245, 164, 14);
 }
+
 /* Size of the image in gallery */
 div.gallery img {
     width: 100%;
     height: auto;
 }
+
 /* description of the image */
 div.desc {
     padding: 15px;
@@ -302,11 +322,12 @@ div.desc {
     text-align: center;
     color: whitesmoke;
 }
+
 table {
     background-color: #191b2a;
 }
 
-table .tr .td{
+table .tr .td {
     background-color: #d26a10;
 }
 
@@ -325,73 +346,84 @@ hr {
 }
 
 .footer {
-    background:#191b2a;;
+    background: #191b2a;
+    ;
     margin-top: 0;
 }
-.f1{
-    margin-top:6rem;
+
+.f1 {
+    margin-top: 6rem;
 }
-.f1 p{
+
+.f1 p {
     font-size: 2rem;
-    color:#fff;
+    color: #fff;
 }
-.f1 img{
+
+.f1 img {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
 }
-.f2{
-    margin-top:0rem;
+
+.f2 {
+    margin-top: 0rem;
     padding-left: 20rem;
     padding-bottom: 0rem;
 }
-.f2 h1{
+
+.f2 h1 {
     font-size: 5rem;
-    color:#fff;
+    color: #fff;
 }
-.f2 hr{
+
+.f2 hr {
     background-color: #fff;
-    height:0.8px;
-    width:100%;
-   }
-.f2 p{
+    height: 0.8px;
+    width: 100%;
+}
+
+.f2 p {
     font-size: 2rem;
-    color:#fff;
-}
-.f2 a{
-    text-decoration:none;
-    color:aqua;
-}
-.f2 a:hover{
-    text-decoration:underline;
-    color:aqua;
+    color: #fff;
 }
 
-.login-status{
-  
-    color:#f6831e;
+.f2 a {
+    text-decoration: none;
+    color: aqua;
+}
+
+.f2 a:hover {
+    text-decoration: underline;
+    color: aqua;
+}
+
+.login-status {
+
+    color: #f6831e;
     padding-left: 25%;
-    
+
 }
 
-.login-status a{
+.login-status a {
     color: #fff;
     font-size: 3rem;
 }
 
 
-.login-status a:hover{
-   color:#f6831e;
+.login-status a:hover {
+    color: #f6831e;
 }
 
-.fa-user{
-    color:#fff;
+.fa-user {
+    color: #fff;
     font-size: 3rem;
 
 }
 
-.fa-user:hover{
-    color:#f6831e;
+.fa-user:hover {
+    color: #f6831e;
 }
+
 /* Login success text */
 .success {
     background: #D4EDDA;
@@ -400,7 +432,7 @@ hr {
     width: 95%;
     border-radius: 5px;
     margin: 20px auto;
- }
+}
 
 .content h3 {
     font-size: 3rem;
@@ -410,29 +442,31 @@ hr {
 }
 
 .builder tr td {
-        width:130px;
-        text-align:center;
-        border:1px solid rgb(181, 176, 176);
-        padding:2rem;
-        font-size: 15px;
-        font-weight: 450;
+    width: 130px;
+    text-align: center;
+    border: 1px solid rgb(181, 176, 176);
+    padding: 2rem;
+    font-size: 15px;
+    font-weight: 450;
 
-    }
+}
+
 /* the table in the page */
-.builder{
-        margin: 0;
-        width: 90%;
-        margin-left: 4%;
-        margin-right: 5%;
+.builder {
+    margin: 0;
+    width: 90%;
+    margin-left: 4%;
+    margin-right: 5%;
 }
 
 
-.builder th{
+.builder th {
     text-align: center;
     font-size: 18px;
-} 
- /* Clear build button css */
-.clearbuild{
+}
+
+/* Clear build button css */
+.clearbuild {
     border: var(--border);
     background-color: rgba(239, 52, 1, 0.947);
     color: #fff;
@@ -446,11 +480,12 @@ hr {
     font-size: 14px;
 }
 
-.clearbuild:hover{
+.clearbuild:hover {
     background-color: rgb(215, 38, 38);
 }
+
 /* Save build button */
-.savebuild{
+.savebuild {
     border: var(--border);
     background-color: rgba(63, 177, 35, 0.947);
     color: #fff;
@@ -465,6 +500,6 @@ hr {
     font-size: 14px;
 }
 
-.savebuild:hover{
+.savebuild:hover {
     background-color: rgb(75, 141, 36);
 }

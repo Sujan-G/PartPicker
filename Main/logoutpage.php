@@ -24,13 +24,13 @@
         <section>
             <form action="logincheck.php" method="post">
 
-            <?php if (isset($_GET['error'])) { ?>
+                <?php if (isset($_GET['error'])) { ?>
                     <p class="success"><?php echo $_GET['error']; ?></p>
-                <?php } 
+                <?php }
                 ?>
 
 
-             
+
                 <br>
                 <input type="text" name="uname" placeholder=" User Name">
                 <p>
@@ -45,11 +45,11 @@
             <a href="forgot.php">Forgot Password?</p></a>
 
             <h4>Not a Member?</h4>
-                <a href='signup.php'>
-                    <button class="registerb">
-                        <b>Register Here</b>
-                    </button>
-                </a>
+            <a href='signup.php'>
+                <button class="registerb">
+                    <b>Register Here</b>
+                </button>
+            </a>
 
             </form>
 
