@@ -25,6 +25,8 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href=".\css\material-dashboard.css" rel="stylesheet" />
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
 
   <body class="g-sidenav-show  bg-gray-200">
@@ -38,8 +40,18 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
       <hr class="horizontal light mt-0 mb-2">
       <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
         <ul class="navbar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link text-white" href="category.php">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">table_view</i>
+              </div>
+              <span class="nav-link-text ms-1">All Categories</span>
+            </a>
+          </li>
+
           <li class="nav-item">
-            <a class="nav-link text-white active bg-gradient-primary" href="add_category.php">
+            <a class="nav-link text-white active" href="add_category.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">add</i>
               </div>
@@ -55,13 +67,15 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">
+            <a class="nav-link text-white active bg-gradient-primary" href="#">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">receipt_long</i>
               </div>
               <span class="nav-link-text ms-1">Billing</span>
             </a>
           </li>
+
+         
         </ul>
       </div>
       <div class="sidenav-footer position-absolute w-100 bottom-0 ">
@@ -71,6 +85,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
       </div>
     </aside>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+
       <!-- End Navbar -->
       <div class="container-fluid py-4">
         <h2 class="font-weight-bolder mb-0">General Statistics</h2>

@@ -16,7 +16,7 @@ if (isset($_POST['add_category_btn'])) {
     $popular = isset($_POST['popular']) ? '1' : '0';
     $path = "Uploads";
     $image_ext = pathinfo($image, PATHINFO_EXTENSION);
-    $filename = time() . '.' . $image_ext;
+    $filename = $image;
 
     $cate_query = "INSERT INTO categories (name,description,image,meta_title,status,popular)
   VALUES ('$name','$description','$image','$meta_title','$status','$popular')";
