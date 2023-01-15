@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
-:root {
-    --orange: #ff7800;
-    --black: #130f40;
-    --light-color: #666;
-    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-    --border: .2rem solid rgba(0, 0, 0, .1);
-    --outline: .1rem solid rgba(0, 0, 0, .1);
-    --outline-hover: .2rem solid var(--black);
-}
-
-
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -81,7 +70,7 @@ body {
 }
 
 .header .navbar a:hover {
-    color: var(--orange);
+    color: orange;
 }
 
 .header .icons div {
@@ -90,7 +79,7 @@ body {
     line-height: 4.5rem;
     border-radius: .5rem;
     background: #eee;
-    color: var(--black);
+    color: black;
     font-size: 2rem;
     margin-left: .3rem;
     cursor: pointer;
@@ -98,7 +87,7 @@ body {
 }
 
 .header .icons div:hover {
-    background: var(--orange);
+    background: orange;
     color: #fff;
 }
 
@@ -131,14 +120,14 @@ body {
     background: none;
     text-transform: none;
     font-size: 1.6rem;
-    color: var(--black);
+    color: black;
     padding: 0 1.5rem;
 }
 
 .header .search-form label {
     font-size: 2.2rem;
     padding-right: 1.5rem;
-    color: var(--black);
+    color: black;
     cursor: pointer;
 }
 
@@ -221,6 +210,123 @@ table .tr .td {
     background-color: #666;
 }
 
+.divlinks li{
+    position: relative;
+    display:inline-block;
+    padding: 20px;
+}
+.divlinks li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.divlinks li::after {
+    height: 2px;
+    background: #e3a010;
+    transition: 0.4s;
+    width: 0%;
+    display: block;
+    margin: auto;
+    content: '';
+}
+
+.divlinks li:hover::after {
+    width: 100%;
+
+}
+.links li{
+    position: relative;
+    display:inline-block;
+    padding: 20px;
+}
+.links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.links li::after {
+    height: 2px;
+    background: #e3a010;
+    transition: 0.4s;
+    width: 0%;
+    display: block;
+    margin: auto;
+    content: '';
+}
+
+.links li:hover::after {
+    width: 100%;
+
+}
+
+section{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    display: block;
+    background-color:#191b2a;
+    padding-bottom: 0%;
+    width: 100%;
+    height:100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0em;
+    margin-bottom: 0px;
+    margin: auto;
+    border-radius: 0%;
+    position: relative;
+}
+h1{
+    color:ivory;
+    text-align: center;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right:2%;
+    padding-bottom: 2%;
+    font-size: 300%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.acc{
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Verdana, sans-serif;
+    border-radius: 5px;
+    display: block;
+    background-color:white;
+    margin-top:2rem;
+    margin-left:0rem;
+    margin-right:0rem;
+    padding-top:4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom:1rem;
+    border-radius: 0%;
+    position: relative;
+
+}
+.acc form{
+font-size: 2rem;
+}
+.acc form h5{
+    width:10%;
+    height:10%;
+}
+.acc form .Name{
+    display:inline-flex;
+}
+.acc form .Mail{
+    display:inline-flex;
+}
+.acc form .Pass{
+    display:inline-flex;
+}
+.acc form .Mail p{
+    text-transform: lowercase;
+}
 .dropbtn {
     background-color: transparent;
     color: white;
@@ -329,19 +435,11 @@ div.desc {
     font-size: 18px;
 }
 
-hr {
-    /* background-color: black; */
-    height: 0.8px;
-    width: 85%;
-    margin-top: 0;
-
-
-}
-
 .footer {
-    background: #191b2a;
-    ;
-    margin-top: 0;
+    background:#191b2a;
+    padding-top:2rem;
+    padding-bottom: 14rem;
+    margin-bottom:0rem;
 }
 
 .f1 {
@@ -390,10 +488,9 @@ hr {
     color: aqua;
 }
 
-
-.login-status {
-
-    color: #f6831e;
+.login-status{
+  
+    color:#f6831e;
     padding-left: 25%;
 
 }
@@ -426,47 +523,4 @@ hr {
     width: 95%;
     border-radius: 5px;
     margin: 20px auto;
-}
-
-.content h3 {
-    font-size: 3rem;
-    font-family: 'Chivo Mono', monospace;
-    font-family: 'Inter', sans-serif;
-    padding-top: 18%;
-}
-
-section {
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-radius: 5px;
-    display: block;
-    background-color: #191b2a;
-    padding-bottom: 0%;
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0em;
-    margin-bottom: 0px;
-    margin: auto;
-    border-radius: 0%;
-    position: relative;
-}
-
-.acc {
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-radius: 5px;
-    display: block;
-    background-color: #191b2a;
-    padding-bottom: 0%;
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0em;
-    margin-bottom: 0px;
-    margin: auto;
-    border-radius: 0%;
-    position: relative;
-}
+ }

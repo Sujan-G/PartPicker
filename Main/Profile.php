@@ -145,30 +145,38 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <form action="reset.php" method="post" enctype="multipart/form-data">
                     <?php
 
-                    $sql = "SELECT * FROM users WHERE id='{$_SESSION["id"]}'";
-                    $result = mysqli_query($conn, $sql);
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
-                            <input label for="Name">Name:</label>
-                            <input type="text" id="user_name" name="uname" placeholder="Name" value="<?php echo $_SESSION['user_name']; ?>">
-
-                            <div class="Mail">
-                                <input label for="email">Email:</label>
-                                <input type="email" id="email" name="email" placeholder="Email" value="<?php echo $row['email']; ?>" required>
-                            </div>
-                            <input label for="password">Password:</label>
-                            <input type="password" id="password" name="password" placeholder="Password" value="<?php echo $row['password']; ?>" required>
-                    <?php
-                        }
-                    }
-                    ?>
+            $sql = "SELECT * FROM users WHERE id='{$_SESSION["id"]}'";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>      <div class="Name">
+                    <h4>
+                    <input label for="Name">Name:</label></h4>
+                  <p><?php echo $_SESSION['user_name']; ?></p>
+                </div>
+                <br>
+                   <div class="Mail">
+                    <h4>
+                    <input label for="email">Email:</label></h4>
+                    <p><?php echo $row['email'];?></p>
+                    </div>
                     <br>
-                    <input type="submit" value="Reset Password">
-                </form>
-            </div>
-        </section>
-        <section class="footer" id="footer">
+                    <div class="Pass">
+                        <h4>
+                        <input label for="password">Password:</label></h4>
+                        <p><input type="password" id="password" name="password" placeholder="Password" value="<?php echo $row['password']; ?>" required>
+                </p>
+                </div>
+           <?php
+                }
+            }
+            ?>
+            <br> 
+            <input type="submit" value="Reset Password">
+            </form>
+    </div>
+    </section>
+    <section class="footer" id="footer">
             <table>
                 <tr>
                     <td>
