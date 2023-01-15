@@ -26,9 +26,9 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
     <!-- CSS Files -->
     <link id="pagestyle" href=".\css\material-dashboard.css" rel="stylesheet" />
   </head>
-    <!-- Alerify JS -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+  <!-- Alerify JS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
   </head>
   <style>
     .form-control {
@@ -50,7 +50,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
     }
   </style>
 
-<body class="g-sidenav-show  bg-gray-200">
+  <body class="g-sidenav-show  bg-gray-200">
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
       <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -61,13 +61,22 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
       <hr class="horizontal light mt-0 mb-2">
       <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
         <ul class="navbar-nav">
-          
-        <li class="nav-item">
+
+          <li class="nav-item">
             <a class="nav-link text-white" href="category.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">table_view</i>
               </div>
               <span class="nav-link-text ms-1">All Categories</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="category.php">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">table_view</i>
+              </div>
+              <span class="nav-link-text ms-1">All Items</span>
             </a>
           </li>
 
@@ -80,28 +89,32 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="../pages/tables.html">
+            <a class="nav-link text-white " href="add_item.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">add</i>
               </div>
               <span class="nav-link-text ms-1">Add Item</span>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">receipt_long</i>
+              </div>
+              <span class="nav-link-text ms-1">Billing</span>
+            </a>
+
+
         </ul>
       </div>
       <div class="sidenav-footer position-absolute w-100 bottom-0 ">
         <div class="mx-3">
-        <a class="btn bg-gradient-primary mt-4 w-100" href="adminlogout.php" type="button">Log Out</a>        </div>
+          <a class="btn bg-gradient-primary mt-4 w-100" href="adminlogout.php" type="button">Log Out</a>
+        </div>
       </div>
     </aside>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-      <!-- Navbar -->
-      <!-- <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-        <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-        </div> -->
-<!-- 
-      </div>
-      </nav> -->
 
       <!-- End Navbar -->
 
@@ -116,33 +129,33 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                 <form action="code.php" method="post" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-md-8">
-                      <label for="">Name</label>
-                      <input type="text" name="name" placeholder="Enter Category Name" required class="form-control ">
+                      <label class="mb-0">Name</label>
+                      <input type="text" name="name" placeholder="Enter Category Name" required class="form-control">
                     </div>
 
                     <div class="col-md-12">
-                      <label for="">Description</label>
+                      <label class="mb-0">Description</label>
                       <textarea rows="3" name="description" placeholder="Enter Description" required class="form-control">
                     </textarea>
                     </div>
 
                     <div class="col-md-12">
-                      <label for="">Upload Image</label>
+                      <label class="mb-0">Upload Image</label>
                       <input type="file" name="image" required class="form-control">
                     </div>
 
                     <div class="col-md-12">
-                      <label for="">Meta Title</label>
+                      <label class="mb-0">Meta Title</label>
                       <input type="text" name="meta_title" required placeholder="Enter Meta Title" class="form-control">
                     </div>
-
+                    <br>
                     <div class="col-md-6">
-                      <label for="">Status</label>
+                      <label class="mb-0">Status</label>
                       <input type="checkbox" name="status">
                     </div>
 
                     <div class="col-md-6">
-                      <label for="">Popular</label>
+                      <label class="mb-0">Popular</label>
                       <input type="checkbox" name="popular">
                     </div>
 

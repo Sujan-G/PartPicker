@@ -1,9 +1,9 @@
 <?php
 session_start();
 include "db_conn.php";
-	if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 ?>
- <!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="en">
 
     <head>
@@ -23,10 +23,10 @@ include "db_conn.php";
         <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0469953560.js" crossorigin="anonymous"></script>
     </head>
-<title>Profile</title>
+    <title>Profile</title>
 
-<body>    
-    <header class="header">
+    <body>
+        <header class="header">
             <!-- making the logo link to the main home page -->
             <a href="home.php" class="logo"> <img src="image\partpicker.png"></a>
             <!-- creating a navbar -->
@@ -131,44 +131,44 @@ include "db_conn.php";
                 <input type="search" id="search-box" placeholder="search here...">
                 <label for="search-box" class="fas fa-search"></label>
             </form>
-</header>
-    <section>
-        <hr>
-        <h1>Profile</h1>
-        <div class="links">
-            <ul>
-                <li><a href="profile.php"> Account </a></li>
-                <li><a href="bh.php"> Build History </a></li>
-            </ul>
-        </div>
-        <div class="acc">
-        <form action="reset.php" method="post" enctype="multipart/form-data">
-            <?php
+        </header>
+        <section>
+            <!-- <hr> -->
+            <h1>Profile</h1>
+            <div class="links">
+                <ul>
+                    <li><a href="profile.php"> Account </a></li>
+                    <li><a href="bh.php"> Build History </a></li>
+                </ul>
+            </div>
+            <div class="acc">
+                <form action="reset.php" method="post" enctype="multipart/form-data">
+                    <?php
 
-            $sql = "SELECT * FROM users WHERE id='{$_SESSION["id"]}'";
-            $result = mysqli_query($conn, $sql);
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-            ?>
-                    <input label for="Name">Name:</label>
-                    <input type="text" id="user_name" name="uname" placeholder="Name" value="<?php echo $_SESSION['user_name']; ?>" >
-                   
-                   <div class="Mail">
-                    <input label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Email" value="<?php echo $row['email'];?>" required>
-                    </div>
-                        <input label for="password">Password:</label>
-                        <input type="password" id="password" name="password" placeholder="Password" value="<?php echo $row['password']; ?>" required>
-            <?php
-                }
-            }
-            ?>
-            <br> 
-            <input type="submit" value="Reset Password">
-            </form>
-    </div>
-    </section>
-    <section class="footer" id="footer">
+                    $sql = "SELECT * FROM users WHERE id='{$_SESSION["id"]}'";
+                    $result = mysqli_query($conn, $sql);
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                            <input label for="Name">Name:</label>
+                            <input type="text" id="user_name" name="uname" placeholder="Name" value="<?php echo $_SESSION['user_name']; ?>">
+
+                            <div class="Mail">
+                                <input label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Email" value="<?php echo $row['email']; ?>" required>
+                            </div>
+                            <input label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Password" value="<?php echo $row['password']; ?>" required>
+                    <?php
+                        }
+                    }
+                    ?>
+                    <br>
+                    <input type="submit" value="Reset Password">
+                </form>
+            </div>
+        </section>
+        <section class="footer" id="footer">
             <table>
                 <tr>
                     <td>
@@ -220,7 +220,7 @@ include "db_conn.php";
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <!-- custom js file link  -->
         <script src="script.js"></script>
-</body>
+    </body>
 <?php
 } else {
     header("Location: login.php");

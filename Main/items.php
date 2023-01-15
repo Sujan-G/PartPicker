@@ -56,18 +56,18 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
         <ul class="navbar-nav">
 
 
-          <li class="nav-item">
-            <a class="nav-link text-white active bg-gradient-primary" href="category.php">
+        <li class="nav-item">
+            <a class="nav-link text-white" href="category.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">table_view</i>
               </div>
-              <span class="nav-link-text ms-1">All Categories</span>
+              <span class="nav-link-text ms-1">All Category</span>
             </a>
           </li>
 
 
           <li class="nav-item">
-            <a class="nav-link text-white active" href="items.php">
+            <a class="nav-link text-white active bg-gradient-primary" href="items.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">table_view</i>
               </div>
@@ -84,7 +84,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
             </a>
           </li>
 
-
+          
 
           <li class="nav-item">
             <a class="nav-link text-white " href="add_item.php">
@@ -124,6 +124,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                     <tr>
                       <th>ID</th>
                       <th>Name</th>
+                      <th>Category</th>
                       <th>Image</th>
                       <th>Status</th>
                       <th>Delete</th>
@@ -132,14 +133,14 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                   <tbody>
                     <?php
                     include('db_conn.php');
-                    function getAll($categories)
+                    function getAll($products)
                     {
                       global $conn;
-                      $query = "SELECT * FROM $categories";
+                      $query = "SELECT * FROM $products";
                       return $query_run = mysqli_query($conn, $query);
                     }
 
-                    $category = getAll("categories");
+                    $category = getAll("products");
 
                     if (mysqli_num_rows($category) > 0) {
                       foreach ($category as $item) {
@@ -147,14 +148,15 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                         <tr>
                           <td><?= $item['id']; ?></td>
                           <td><?= $item['name']; ?></td>
+                          <td><?=$item['slug'];?></td>
                           <td>
-                            <img src="./Uploads/<?= $item['image']; ?>" width=70px alt="<?= $item['name']; ?>">
+                            <img src="./Uploads/<?= $item['image'];?>"  width=70px alt="<?= $item['name']; ?>">
                           </td>
-                          <td><?= $item['status'] == '1' ? "Visible" : "Hidden" ?></td>
+                          <td><?= $item['status'] == '0' ? "Visible" : "Hidden" ?></td>
                           <td>
-                            <form action="code.php" method="POST">
-                              <input type="hidden" value="<?= $item['id']; ?>" name="category_id">
-                              <button type="submit" class="btn btn-danger" name="delete_category_btn">Delete
+                          <form action="code.php" method="POST">
+                              <!-- <input type="hidden" value="<?= $item['id']; ?>" name="product_id"> -->
+                              <button type="submit" class="btn btn-danger" name="delete_items_btn">Delete
                             </form>
                           </td>
                         </tr>

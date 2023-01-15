@@ -1,5 +1,5 @@
 :root {
-    
+
   --bs-font-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -8,12 +8,13 @@
   --bs-body-line-height: 1.5;
 
 }
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -35,7 +36,10 @@ hr {
   opacity: 0.25;
 }
 
-h1, .h1, h2, .h2 {
+h1,
+.h1,
+h2,
+.h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 400;
@@ -43,11 +47,13 @@ h1, .h1, h2, .h2 {
   color: #344767;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: calc(1.425rem + 2.1vw);
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: calc(1.35rem + 1.2vw);
 }
 
@@ -74,13 +80,13 @@ ul ol {
   margin-bottom: 0;
 }
 
-  a {
+a {
   color: white;
   text-decoration: none;
 }
 
 a:hover {
-  color:#fff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -101,10 +107,10 @@ textarea {
   line-height: inherit;
 }
 
-button{
+button {
   text-transform: none;
 }
-    
+
 .container,
 .container-fluid,
 .container-sm,
@@ -194,9 +200,9 @@ button{
   background-size: 150%;
   background-position-x: 25%;
   position: relative;
-  color:white;
+  color: white;
 
-  }
+}
 
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
@@ -215,7 +221,7 @@ button{
 .d-flex {
   display: flex !important;
 }
-  
+
 .d-none {
   display: none !important;
 }
@@ -223,7 +229,7 @@ button{
 .position-absolute {
   position: absolute !important;
 }
-  
+
 .bottom-0 {
   bottom: 0 !important;
 }
@@ -236,6 +242,7 @@ button{
 .mx-3 {
   margin-right: 1rem !important;
   margin-left: 1rem !important;
+  color:#fff;
 }
 
 /*Admin panel box*/
@@ -246,8 +253,9 @@ button{
 
 .mt-0 {
   margin-top: 0 !important;
-}  
- .ms-3 {
+}
+
+.ms-3 {
   margin-left: 1rem !important;
 }
 
@@ -321,6 +329,7 @@ label,
 html {
   border: none !important;
 }
+
 hr {
   border-top: none;
   height: 1px;
@@ -338,6 +347,7 @@ hr.vertical {
 hr.vertical.light {
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
 }
+
 hr.horizontal.light {
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
 }
@@ -389,6 +399,7 @@ hr.horizontal.light {
 .navbar-vertical.navbar-expand-xs.fixed-end {
   right: 0;
 }
+
 /*Admin panel list*/
 
 .navbar-vertical.navbar-expand-xs .navbar-nav .nav-link {
@@ -402,6 +413,7 @@ hr.horizontal.light {
 .sidenav .navbar-heading {
   display: block;
 }
+
 /* right side of the page */
 @media (min-width: 1200px) {
   .sidenav:hover {

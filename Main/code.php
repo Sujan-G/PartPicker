@@ -3,11 +3,6 @@ session_start();
 include('db_conn.php');
 include('redirect.php');
 if (isset($_POST['add_category_btn'])) {
-
-
-
-  
-
     $name = $_POST['name'];
     $description = $_POST['description'];
     $image = $_FILES['image']['name'];
@@ -29,4 +24,65 @@ if (isset($_POST['add_category_btn'])) {
     } else {
         redirect("add_category.php", "Something went Wrong");
     }
+} else if (isset($_POST['add_item_btn'])) {
+    $category_id = $_POST['category_id'];
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+    $image = $_FILES['image']['name'];
+    $price = $_POST['price'];
+    $meta_keywords = $_POST['meta_keywords'];
+    $slug=$_POST['slug'];
+    $status=$_POST['status'];
+    $image_ext = pathinfo($image, PATHINFO_EXTENSION);
+    $filename = $image;
+    $path = "Uploads";
+
+    $item_query = "INSERT INTO products (category_id,name,description,image,price,meta_keywords,slug,status) VALUES ('$category_id','$name','$description','$image','$price','$meta_keywords','$slug','$status')";
+    $item_run_query = mysqli_query($conn, $item_query);
+
+    if ($item_run_query) {
+        move_uploaded_file($_FILES['image']['tmp_name'], $path . '/' . $filename);
+        redirect("add_item.php", "Item   Added SuccesFully");
+    } else {
+        redirect("add_item.php", "Something went Wrong");
+    }
 }
+
+elseif (isset($_POST['delete_category_btn']))
+{
+    $category_id = mysqli_real_escape_string($conn,$_POST['category_id']);
+    $delete_query="DELETE FROM categories WHERE id='$category_id'";
+    $delete_query_run=mysqli_query($conn,$delete_query);
+
+    if($delete_query_run)
+    {
+        redirect("category.php","Category Deleted Successfully" );
+    }
+
+    else
+    {
+        redirect("category.php","Something went wrong");
+    }
+}
+
+
+// elseif (isset($_POST['delete_items_btn']))
+// {
+//     $product_query="SELECT*FROM products WHERE id='$product_id'";
+//     $product_query_run=mysqli_query($conn,$delete_query);
+//     $product_data = mysqli_fetch_array( $product_query_run);
+//     $image= $product_data['image'];
+//     $delete_query="DELETE FROM products WHERE id='$product_id'";
+//     $delete_query_run=mysqli_query($conn,$delete_query);
+  
+
+//     if($delete_query_run)
+//     {
+//         redirect("items.php","Products Deleted Successfully" );
+//     }
+
+//     else
+//     {
+//         redirect("items.php","Something went wrong");
+//     }
+// }
