@@ -105,7 +105,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <a href="#benchmarks">Benchmarks</a>
          </nav>
          <div class="login-status">
-            <a href="profile.html">
+            <a href="profile.php">
                <i class="fa-solid fa-user"> <?php echo "<styles>" . $_SESSION['user_name'];
                                              "</styles>" ?></i>
             </a>

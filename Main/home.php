@@ -25,7 +25,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0469953560.js" crossorigin="anonymous"></script>
-        <title>Buildere</title>
+        <title>Home</title>
     </head>
 
     <body>
