@@ -111,7 +111,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
                 </div>
 
-                <a href="#benchmarks">Benchmarks</a>
+                <a href="benchmarks.php">Benchmarks</a>
             </nav>
             <!-- Displaying User name at the top -->
             <div class="login-status">
