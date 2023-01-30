@@ -130,17 +130,19 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </header>
         <section class="Compare">
             <div class="content">
-                <h3>Compare</h3>
+                <h3>Compare Specifications</h3>
             </div>
 </section>
-<section class="cm">
+<table class="cm">
 <form method="post">
+    <tr>
+    <th>
     <div class="Compare">
     <div class="cm1">
     <?php include "db_conn.php";
  if($r_set = $conn->query("SELECT * from products")){
 
-    echo "<select name=name class='form-control' style='width:100px;'>";
+    echo "<select name=name[] class='form-control' style='width:100px;'>";
 while ($row = $r_set->fetch_assoc()) {
 echo "<option value=$row[id]>$row[name]</option>";
 }
@@ -149,11 +151,14 @@ echo "</select>";
 echo $conn->error;
 }
 ?> </div>
+</div></th>
+<th>
+        <div class="Compare">
             <div class="cm2">
            <?php include "db_conn.php";
  if($r_set = $conn->query("SELECT * from products")){
 
-echo "<select name=name class='form-control' style='width:100px;'>";
+echo "<select name=name[] class='form-control' style='width:100px;'>";
 while ($row = $r_set->fetch_assoc()) {
 echo "<option value=$row[id]>$row[name]</option>";
 }
@@ -162,15 +167,49 @@ echo "</select>";
 echo $conn->error;
 }
 ?>
-        <span class="help-inline"></span>
     </div>
 </div>
-    <center><div class="controls">
-        <input type="submit" name='Compare' value="Compare"></center>
-    </div>
+</th>
+</tr>
+<tr>
+<br>
+<center><div class="controls">
+        <input type="submit" name='Compare' value="Compare">
+    </div></center>
+</tr>
 </form>
-
-</section>
+<tr>
+<br>
+<td>
+<h1>
+<?php
+   if(isset($_POST['Compare']))
+   {
+    $name=$_POST['name'][0];
+    $sql = "SELECT description from products where id=$name";
+    $result = $conn->query($sql);
+    $desc = $result->fetch_assoc();
+    echo $desc['description'];
+   }
+?>
+</h1>
+</td>
+<td>
+<h1>
+<?php
+   if(isset($_POST['Compare']))
+   {
+    $name=$_POST['name'][1];
+    $sql = "SELECT description from products where id=$name";
+    $result = $conn->query($sql);
+    $desc = $result->fetch_assoc();
+    echo $desc['description'];
+   }
+?>
+</h1>
+</td>
+</tr>
+</table>
         <section class="footer" id="footer">
             <table>
                 <tr>
