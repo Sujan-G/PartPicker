@@ -110,7 +110,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
                 </div>
 
-                <a href="#benchmarks">Benchmarks</a>
+                <a href="#Compare">Compare</a>
             </nav>
 
             <div class="login-status">
@@ -279,7 +279,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         <p>
                                             <a href="#">Builder</a><br>
                                             <a href="#">Browse Products</a><br>
-                                            <a href="#">Benchmarks</a>
+                                            <a href="#">Compare</a>
                                         </p>
                                     </center>
                         </div>

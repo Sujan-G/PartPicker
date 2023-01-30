@@ -12,13 +12,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width , initial-scale=1">
-        <link rel="stylesheet" href="benchmarks.css">
+        <link rel="stylesheet" href="Compare.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0469953560.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <title>Benchmarks</title>
+        <title>Compare</title>
     </head>
 
     <body>
@@ -103,7 +103,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     </div>
                 </div>
 
-                <a href="benchmarks.php">Benchmarks</a>
+                <a href="Compare.php">Compare</a>
             </nav>
 
             <div class="login-status">
@@ -128,9 +128,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <label for="search-box" class="fas fa-search"></label>
             </form>
         </header>
-        <section class="benchmarks">
+        <section class="Compare">
             <div class="content">
-                <h3>Benchmarks</h3>
+                <h3>Compare</h3>
             </div>
 </section>
 <section class=bm>
@@ -140,7 +140,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 echo "<select name=name class='form-control' style='width:100px;'>";
 while ($row = $r_set->fetch_assoc()) {
-echo "<option value=$row[id]>$row[name]</option>";
+echo "<option value=$row[id]>$row[description]</option>";
 }
 echo "</select>";
 }else{
@@ -153,7 +153,7 @@ echo $conn->error;
 
 echo "<select name=name class='form-control' style='width:100px;'>";
 while ($row = $r_set->fetch_assoc()) {
-echo "<option value=$row[id]>$row[name]</option>";
+echo "<option value=$row[id]>$row[description]</option>";
 }
 echo "</select>";
 }else{
@@ -187,7 +187,7 @@ echo $conn->error;
                                         <p>
                                             <a href="Builder.php">Builder</a><br>
                                             <a href="Builder.php">Browse Products</a><br>
-                                            <a href="Builder.php">Benchmarks</a>
+                                            <a href="Builder.php">Compare</a>
                                         </p>
                                     </center>
                         </div>
