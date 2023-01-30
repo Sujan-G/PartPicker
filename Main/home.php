@@ -210,51 +210,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
 
         <!-- The dots/circles -->
-        <div style="text-align:center">
+        <div style="text-align:center; background:black">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-
-
-        <!-- <section class="features" id="features">
-
-        <div class="box-container">
-
-            <div class="box">
-
-                <h3>Entry Level AMD Build</h3>
-                <p>
-                    AMD Ryzen 5 5600G
-                    Cooler Master MasterBox Q300L MicroATX Mini Tower</p>
-                <img src="image\entry-lvl.png"><br>
-                <a href="#" class="btn">read more</a>
-            </div>
-            <div class="box">
-
-                <h3>Entry Level AMD Build</h3>
-                <p>
-                    AMD Ryzen 5 5600G
-                    Cooler Master MasterBox Q300L MicroATX Mini Tower</p>
-                <img src="image/entry-lvl.png"><br>
-                <a href="#" class="btn">read more</a>
-            </div>
-            <div class="box">
-
-                <h3>Entry Level AMD Build</h3>
-                <p>
-                    AMD Ryzen 5 5600G
-                    Cooler Master MasterBox Q300L MicroATX Mini Tower</p>
-                <img src="image/entry-lvl.png"><br>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
-    </section> -->
-        <br>
-        <!-- Creating the bottom part of the home page -->
         <section class="footer" id="footer">
             <table>
                 <tr>

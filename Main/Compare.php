@@ -133,35 +133,44 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <h3>Compare</h3>
             </div>
 </section>
-<section class=bm>
-            <div class="bm1">
-           <?php include "db_conn.php";
+<section class="cm">
+<form method="post">
+    <div class="Compare">
+    <div class="cm1">
+    <?php include "db_conn.php";
  if($r_set = $conn->query("SELECT * from products")){
 
-echo "<select name=name class='form-control' style='width:100px;'>";
+    echo "<select name=name class='form-control' style='width:100px;'>";
 while ($row = $r_set->fetch_assoc()) {
-echo "<option value=$row[id]>$row[description]</option>";
+echo "<option value=$row[id]>$row[name]</option>";
 }
 echo "</select>";
 }else{
 echo $conn->error;
 }
 ?> </div>
-            <div class="bm2">
+            <div class="cm2">
            <?php include "db_conn.php";
  if($r_set = $conn->query("SELECT * from products")){
 
 echo "<select name=name class='form-control' style='width:100px;'>";
 while ($row = $r_set->fetch_assoc()) {
-echo "<option value=$row[id]>$row[description]</option>";
+echo "<option value=$row[id]>$row[name]</option>";
 }
 echo "</select>";
 }else{
 echo $conn->error;
 }
 ?>
-            </div>
-        </section>
+        <span class="help-inline"></span>
+    </div>
+</div>
+    <center><div class="controls">
+        <input type="submit" name='Compare' value="Compare"></center>
+    </div>
+</form>
+
+</section>
         <section class="footer" id="footer">
             <table>
                 <tr>
@@ -216,7 +225,7 @@ echo $conn->error;
         <script src="script.js"></script>
 </body>
 <?php
-} else {
+}else {
     header("Location: login.php");
     exit();
 }
