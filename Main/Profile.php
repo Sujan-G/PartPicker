@@ -142,7 +142,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 </ul>
             </div>
             <div class="acc">
-                <form action="reset.php" method="post" enctype="multipart/form-data">
+                <form action="resetpass.php" method="post" enctype="multipart/form-data">
                     <?php
 
             $sql = "SELECT * FROM users WHERE id='{$_SESSION["id"]}'";
