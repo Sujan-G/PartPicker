@@ -23,11 +23,6 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 	$adminpass = validate("0192023a7bbd73250516f069df18b500");
 	$uname = validate($_POST['uname']);
 	$pass = validate($_POST['password']);
-	if ($uname == "admin" && $pass == "admin123") {
-		header("Location:signup.php");
-	}
-
-
 
 	if (empty($uname)) {
 		header("Location: login.php?error=User Name is required");

@@ -143,6 +143,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                       <label class="mb-0">Upload Image</label>
                       <input type="file" name="image" required class="form-control">
                     </div>
+                    
 
                     <div class="col-md-12">
                       <label class="mb-0">Meta Title</label>

@@ -140,8 +140,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <table class="table table-light table-striped table-bordered">
                     <thead class="thead-dark">
                         <tr>
+                            <th>Image</th>
                             <th>Product</th>
                             <th>Price</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -166,6 +168,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 
                                     <tr id="Product">
+                                    <td>
+                            <img src="./Uploads/<?= $item['image'];?>"  width=70px alt="<?= $item['name']; ?>">
+                          </td>
                                         <td><?= $item['name']; ?></td>
                                             <!-- <td class="source"></td> -->
                                             <td>&#8377 <?= $item['price']; ?></td>  

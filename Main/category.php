@@ -145,7 +145,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                       foreach ($category as $item) {
                     ?>
                         <tr>
-                          <td><?= $item['id']; ?></td>
+                          <td><?= $item['category_id']; ?></td>
                           <td><?= $item['name']; ?></td>
                           <td>
                             <img src="./Uploads/<?= $item['image']; ?>" width=70px alt="<?= $item['name']; ?>">
@@ -153,7 +153,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                           <td><?= $item['status'] == '1' ? "Visible" : "Hidden" ?></td>
                           <td>
                             <form action="code.php" method="POST">
-                              <input type="hidden" value="<?= $item['id']; ?>" name="category_id">
+                              <input type="hidden" value="<?= $item['category_id']; ?>" name="category_id">
                               <button type="submit" class="btn btn-danger" name="delete_category_btn">Delete
                             </form>
                           </td>

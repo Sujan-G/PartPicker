@@ -143,7 +143,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                                                 if (mysqli_num_rows($category) > 0) {
                                                     foreach ($category as $item) {
                                                 ?>
-                                                        <option value="<?= $item['id']; ?>"><?= $item['name']; ?></option>
+                                                        <option value="<?= $item['category_id']; ?>"><?= $item['name']; ?></option>
                                                 <?php
                                                     }
                                                 } else {
