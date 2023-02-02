@@ -116,7 +116,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="font-weight-bold mb-1">Categories</h3>
+                <h3 class="font-weight-bold mb-1">Items</h3>
               </div>
               <div class="card-body">
                 <table class="table table-bordered table-striped">
@@ -155,7 +155,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
                           <td><?= $item['status'] == '0' ? "Visible" : "Hidden" ?></td>
                           <td>
                           <form action="code.php" method="POST">
-                              <!-- <input type="hidden" value="<?= $item['id']; ?>" name="product_id"> -->
+                              <input type="hidden" value="<?= $item['id']; ?>" name="item_id">
                               <button type="submit" class="btn btn-danger" name="delete_items_btn">Delete
                             </form>
                           </td>
