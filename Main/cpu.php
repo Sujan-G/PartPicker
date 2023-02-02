@@ -108,7 +108,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
             <div class="login-status">
 
-                <a href="profile.html">
+                <a href="profile.php">
 
                     <i class="fa-solid fa-user"> <?php echo "<styles>" . $_SESSION['user_name'];
                                                     "</styles>" ?></i>
@@ -134,40 +134,53 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             </div>
         </section>
         <section class="products">
-            <center>
+
+            <!-- <center> -->
                 <table class="table table-light table-striped table-bordered">
                     <thead class="thead-dark">
                         <tr>
                             <th>Product</th>
                             <th>Price</th>
-                            <th>Selection</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr id="Product">
-                            <td class="product"></td>
-                            <td class="selection"></td>
-                            <td class="source"></td>
-                        </tr>
-                        <tr id="Product">
-                            <td class="product"></td>
-                            <td class="selection"></td>
-                            <td class="source"></td>
-                        </tr>
-                        <tr id="Product">
-                            <td class="product"></td>
-                            <td class="selection"></td>
-                            <td class="source"></td>
-                        </tr>
-                        <tr id="Product">
-                            <td class="product"></td>
-                            <td class="selection"></td>
-                            <td class="source"></td>
+                        <?php
+                        include('db_conn.php');
+                        function getAll($products)
+                        {
+                            global $conn;
+                            $query = "SELECT * From $products where status ='0' ";
+                            return $query_run = mysqli_query($conn, $query);
+                        }
+
+                        $product = getAll("products");
+
+                        if (mysqli_num_rows($product) > 0) {
+                            if (empty($product)) {
+                                echo "No products";
+                            } else {
+                                foreach ($product as $item) {
+                        ?>
+
+
+
+                                    <tr id="Product">
+                                        <<td><?= $item['name']; ?></td>
+                                            <td class="source"></td>
+                                    </tr>
+
+                        <?php
+                                }
+                            }
+                        }
+
+                        ?>
+
                         </tr>
                     </tbody>
-            </center>
-            </table>
-            </center>
+                </table>
+            <!-- </center> -->
+
         </section>
 
         <section class="footer" id="footer">
