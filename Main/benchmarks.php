@@ -9,17 +9,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width , initial-scale=1">
-        <link rel="stylesheet" href="parts.css">
+        <link rel="stylesheet" href="benchmarks.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0469953560.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <title>CPUs</title>
+        <title>Benchmarks</title>
     </head>
 
     <body>
@@ -104,7 +103,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     </div>
                 </div>
 
-                <a href="Compare.php">Compare</a>
+                <a href="benchmarks.php">Benchmarks</a>
             </nav>
 
             <div class="login-status">
@@ -129,62 +128,40 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <label for="search-box" class="fas fa-search"></label>
             </form>
         </header>
-        <section class="parts">
+        <section class="benchmarks">
             <div class="content">
-                <h3>Choose a CPU</h3>
+                <h3>Benchmarks</h3>
+            </div>
+</section>
+<section class=bm>
+            <div class="bm1">
+           <?php include "db_conn.php";
+ if($r_set = $conn->query("SELECT * from products")){
+
+echo "<select name=name class='form-control' style='width:100px;'>";
+while ($row = $r_set->fetch_assoc()) {
+echo "<option value=$row[id]>$row[name]</option>";
+}
+echo "</select>";
+}else{
+echo $conn->error;
+}
+?> </div>
+            <div class="bm2">
+           <?php include "db_conn.php";
+ if($r_set = $conn->query("SELECT * from products")){
+
+echo "<select name=name class='form-control' style='width:100px;'>";
+while ($row = $r_set->fetch_assoc()) {
+echo "<option value=$row[id]>$row[name]</option>";
+}
+echo "</select>";
+}else{
+echo $conn->error;
+}
+?>
             </div>
         </section>
-        <section class="products">
-
-            <!-- <center> -->
-                <table class="table table-light table-striped table-bordered">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Product</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        include('db_conn.php');
-                        function getAll($products)
-                        {
-                            global $conn;
-                            $query = "SELECT * From $products where status ='0' ";
-                            return $query_run = mysqli_query($conn, $query);
-                        }
-
-                        $product = getAll("products");
-
-                        if (mysqli_num_rows($product) > 0) {
-                            if (empty($product)) {
-                                echo "No products";
-                            } else {
-                                foreach ($product as $item) {
-                        ?>
-
-
-
-                                    <tr id="Product">
-                                        <td><?= $item['name']; ?></td>
-                                            <!-- <td class="source"></td> -->
-                                            <td>&#8377 <?= $item['price']; ?></td>  
-                                    </tr>
-
-                        <?php
-                                }
-                            }
-                        }
-
-                        ?>
-
-                        </tr>
-                    </tbody>
-                </table>
-            <!-- </center> -->
-
-        </section>
-
         <section class="footer" id="footer">
             <table>
                 <tr>
@@ -210,7 +187,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         <p>
                                             <a href="Builder.php">Builder</a><br>
                                             <a href="Builder.php">Browse Products</a><br>
-                                            <a href="Builder.php">Compare</a>
+                                            <a href="Builder.php">Benchmarks</a>
                                         </p>
                                     </center>
                         </div>
@@ -237,12 +214,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <!-- custom js file link  -->
         <script src="script.js"></script>
-    </body>
+</body>
 <?php
 } else {
     header("Location: login.php");
     exit();
 }
 ?>
-
-    </html>
+</html>

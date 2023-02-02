@@ -1,15 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
-
-:root {
-    --orange: #ff7800;
-    --black: #130f40;
-    --light-color: #666;
-    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-    --border: .2rem solid rgba(0, 0, 0, .1);
-    --outline: .1rem solid rgba(0, 0, 0, .1);
-    --outline-hover: .2rem solid var(--black);
-}
-
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -90,7 +78,7 @@ body {
     line-height: 4.5rem;
     border-radius: .5rem;
     background: #eee;
-    color: var(--black);
+    color: black;
     font-size: 2rem;
     margin-left: .3rem;
     cursor: pointer;
@@ -173,7 +161,43 @@ body {
 .header .shopping-cart .box img {
     height: 10rem;
 }
+.benchmarks {
+    display: flex;
+    justify-content: center;
+    background-color:#191b2a;
+}
 
+.benchmarks .content h3 {
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Chivo Mono', monospace;
+    align-items: center;
+    padding-bottom: 7%;
+    padding-top: 5%;
+    font-weight: 550;
+}
+.bm{
+    display:inline-flex;
+    background-color:white;
+    padding-left: 55rem;
+}
+.bm .form-control{
+     font-size: 2rem;
+} 
+.bm .bm1{
+    font-size: 7rem;
+    background-color: white;
+    color: black;
+    font-family: 'Chivo Mono', monospace;
+    padding:4rem;
+}
+.bm .bm2{
+    font-size: 7rem;
+    background-color: white;
+    color: black;
+    font-family: 'Chivo Mono', monospace;   
+    padding:4rem;
+}
 table {
     background-color: #191b2a;
 }
@@ -197,27 +221,6 @@ table .tr .td{
 
 .home .content h3 span {
     color: var(--orange);
-}
-
-
-.parts {
-    display: flex;
-    justify-content: center;
-    background-color:#191b2a;
-}
-
-.parts .content h3 {
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
-    font-family: 'Chivo Mono', monospace;
-    font-family: 'Inter', sans-serif;
-    align-items: center;
-    padding-bottom: 7%;
-    padding-top: 5%;
-    font-weight: 550;
-}
-.features{
-    background-color:#666;
 }
 
 .dropbtn {
@@ -309,32 +312,6 @@ div.desc {
     text-align: center;
     color: whitesmoke;
 }
-.products tr td {
-    width:300px;
-    text-align:center;
-    border:1px solid rgb(205, 199, 199);
-    padding:3rem;
-    font-weight: 450;
-    
-
-
-}
-
-.products{
-    margin: 0;
-    
-}
-.products th{
-    text-align: center;
-    font-size: 18px;
-    
-}
-
-.products td{
-    text-align: center;
-    font-size: 18px;
-    
-}
 
 hr {
     /* background-color: black; */
@@ -424,10 +401,3 @@ hr {
     border-radius: 5px;
     margin: 20px auto;
  }
-
-.content h3 {
-    font-size: 3rem;
-    font-family: 'Chivo Mono', monospace;
-    font-family: 'Inter', sans-serif;
-    padding-top: 18%;
-}
