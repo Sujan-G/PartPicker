@@ -435,11 +435,9 @@ div.desc {
     font-size: 18px;
 }
 
+
 .footer {
-    background:#191b2a;
-    padding-top:2rem;
-    padding-bottom: 14rem;
-    margin-bottom:0rem;
+    background: #191b2a;
 }
 
 .f1 {
@@ -510,12 +508,30 @@ div.desc {
     font-size: 3rem;
 
 }
-
 .fa-user:hover {
     color: #f6831e;
 }
-
-
+.ucc{
+    margin:2rem;
+}
+.ucc p{
+    background-color: #fff;
+    font-size: 2.5rem;
+}
+.about{
+    margin:4rem;
+}
+.about h2{
+    font-size: 3rem;
+}
+.about hr {
+    background-color: black;
+    height: 1px;
+    width: 100%;
+}
+.about p{
+    font-size: 2.5rem;
+}
 .success {
     background: #D4EDDA;
     color: #40754C;
