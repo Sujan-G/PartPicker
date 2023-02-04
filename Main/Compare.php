@@ -210,7 +210,7 @@ echo $conn->error;
 </td>
 </tr>
 </table>
-        <section class="footer" id="footer">
+<section class="footer" id="footer">
             <table>
                 <tr>
                     <td>
@@ -234,8 +234,8 @@ echo $conn->error;
                                     <center>
                                         <p>
                                             <a href="Builder.php">Builder</a><br>
-                                            <a href="Builder.php">Browse Products</a><br>
-                                            <a href="Builder.php">Compare</a>
+                                            <a href="browse.php">Browse Products</a><br>
+                                            <a href="Compare.php">Compare</a>
                                         </p>
                                     </center>
                         </div>
@@ -249,9 +249,8 @@ echo $conn->error;
                                     <br>
                                     <center>
                                         <p>
-                                            <a href="about.html">About</a><br>
-                                            <a href="contact.html">Contact Us</a><br>
-                                            <a href="#">User Code Of Conduct</a>
+                                        <a href="about.php">About</a><br>
+                                        <a href="ucc.php">User Code Of Conduct</a>
                                         </p>
                                     </center>
                         </div>

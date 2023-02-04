@@ -23,7 +23,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Inter&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0469953560.js" crossorigin="anonymous"></script>
     </head>
-    <title>User Code of Conduct</title>
+    <title>About</title>
 
     <body>
         <header class="header">
@@ -188,7 +188,7 @@ Completed Builds posted by users let you see a range of builds, filterable by pa
                                         <p>
                                             <a href="Builder.php">Builder</a><br>
                                             <a href="browse.php">Browse Products</a><br>
-                                            <a href="Compare.php.php">Compare</a>
+                                            <a href="Compare.php">Compare</a>
                                         </p>
                                     </center>
                         </div>
@@ -202,9 +202,8 @@ Completed Builds posted by users let you see a range of builds, filterable by pa
                                     <br>
                                     <center>
                                         <p>
-                                            <a href="about.php">About</a><br>
-                                            <a href="contact.php">Contact Us</a><br>
-                                            <a href="ucc.php">User Code Of Conduct</a>
+                                        <a href="about.php">About</a><br>
+                                        <a href="ucc.php">User Code Of Conduct</a>
                                         </p>
                                     </center>
                         </div>
