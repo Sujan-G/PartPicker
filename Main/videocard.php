@@ -170,7 +170,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                             <img src="./Uploads/<?= $item['image']; ?>" width=70px alt="<?= $item['name']; ?>">
                                         </td>
                                         <td><?= $item['name']; ?></td>
-                                        <td>&#8377 <?= $item['price']; ?></td>
+                                        <td>&#8377 <?= $item['price']; ?>&#160;&#160;&#160;<a class="btn btn-primary btn-lg" href="#" role="button">ADD</button></td>
                                     </tr>
 
                         <?php
