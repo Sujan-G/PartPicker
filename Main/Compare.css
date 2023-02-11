@@ -165,6 +165,7 @@ body {
     display: flex;
     justify-content: center;
     background-color:#191b2a;
+    height: 15rem;
 }
 
 .Compare .content h3 {
@@ -176,10 +177,14 @@ body {
     padding-top: 5%;
     font-weight: 550;
 }
+.cm1{
+    width: 25rem;
+}
 .cm{
     display:inline-flex;
+    border: border;
     background-color:white;
-    padding-left: 55rem;
+
 }
 .cm .form-control{
      font-size: 2rem;
@@ -335,8 +340,10 @@ hr {
 }
 
 .footer {
-    background:#191b2a;;
-    margin-top: 0;
+    background: #191b2a;
+    margin-bottom:0rem;
+    margin-top:0rem;
+    padding:7rem;
 }
 .f1{
     margin-top:6rem;

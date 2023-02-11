@@ -133,7 +133,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <h3>Compare Specifications</h3>
             </div>
         </section>
-        <table class="cm">
+        <table class="table table-light table-striped table-bordered">
             <form method="post">
                 <tr>
                     <th>
@@ -142,9 +142,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 <?php include "db_conn.php";
                                 if ($r_set = $conn->query("SELECT * from products")) {
 
-                                    echo "<select name=name[] class='form-control' style='width:100px;'>";
+                                    echo "<select name=name[] class='form-control' style='width:10rem;'>";
                                     while ($row = $r_set->fetch_assoc()) {
-                                        echo "<option value=$row[id]>$row[name]</option>";
+                                        echo "<option value=$row[id]>$row[description]</option>";
                                     }
                                     echo "</select>";
                                 } else {
@@ -159,9 +159,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 <?php include "db_conn.php";
                                 if ($r_set = $conn->query("SELECT * from products")) {
 
-echo "<select name=name[] class='form-control' style='width:100px;'>";
+echo "<select name=name[] class='form-control' style='width:10rem;'>";
 while ($row = $r_set->fetch_assoc()) {
-echo "<option value=$row[id]>$row[name]</option>";
+echo "<option value=$row[id]>$row[description]</option>";
 }
 echo "</select>";
 }else{
@@ -187,10 +187,10 @@ echo $conn->error;
    if(isset($_POST['Compare']))
    {
     $name=$_POST['name'][0];
-    $sql = "SELECT description from products where id=$name";
+    $sql = "SELECT name from products where id=$name";
     $result = $conn->query($sql);
     $desc = $result->fetch_assoc();
-    echo $desc['description'];
+    echo $desc['name'];
    }
 ?>
 </h1>
@@ -201,10 +201,10 @@ echo $conn->error;
    if(isset($_POST['Compare']))
    {
     $name=$_POST['name'][1];
-    $sql = "SELECT description from products where id=$name";
+    $sql = "SELECT name from products where id=$name";
     $result = $conn->query($sql);
     $desc = $result->fetch_assoc();
-    echo $desc['description'];
+    echo $desc['name'];
    }
 ?>
 </h1>
