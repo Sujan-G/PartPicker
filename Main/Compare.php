@@ -159,59 +159,59 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 <?php include "db_conn.php";
                                 if ($r_set = $conn->query("SELECT * from products")) {
 
-                                    echo "<select name=name[] class='form-control' style='width:100px;'>";
-                                    while ($row = $r_set->fetch_assoc()) {
-                                        echo "<option value=$row[id]>$row[name]</option>";
-                                    }
-                                    echo "</select>";
-                                } else {
-                                    echo $conn->error;
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </th>
-                </tr>
-                <tr>
-                    <br>
-                    <center>
-                        <div class="controls">
-                            <input type="submit" name='Compare' value="Compare">
-                        </div>
-                    </center>
-                </tr>
-            </form>
-            <tr>
-                <br>
-                <td>
-                    <h1>
-                        <?php
-                        if (isset($_POST['Compare'])) {
-                            $name = $_POST['name'][0];
-                            $sql = "SELECT description from products where id=$name";
-                            $result = $conn->query($sql);
-                            $desc = $result->fetch_assoc();
-                            echo $desc['description'];
-                        }
-                        ?>
-                    </h1>
-                </td>
-                <td>
-                    <h1>
-                        <?php
-                        if (isset($_POST['Compare'])) {
-                            $name = $_POST['name'][1];
-                            $sql = "SELECT description from products where id=$name";
-                            $result = $conn->query($sql);
-                            $desc = $result->fetch_assoc();
-                            echo $desc['description'];
-                        }
-                        ?>
-                    </h1>
-                </td>
-            </tr>
-        </table>
-        <section class="footer" id="footer">
+echo "<select name=name[] class='form-control' style='width:100px;'>";
+while ($row = $r_set->fetch_assoc()) {
+echo "<option value=$row[id]>$row[name]</option>";
+}
+echo "</select>";
+}else{
+echo $conn->error;
+}
+?>
+    </div>
+</div>
+</th>
+</tr>
+<tr>
+<br>
+<center><div class="controls">
+        <input type="submit" name='Compare' value="Compare">
+    </div></center>
+</tr>
+</form>
+<tr>
+<br>
+<td>
+<h1>
+<?php
+   if(isset($_POST['Compare']))
+   {
+    $name=$_POST['name'][0];
+    $sql = "SELECT description from products where id=$name";
+    $result = $conn->query($sql);
+    $desc = $result->fetch_assoc();
+    echo $desc['description'];
+   }
+?>
+</h1>
+</td>
+<td>
+<h1>
+<?php
+   if(isset($_POST['Compare']))
+   {
+    $name=$_POST['name'][1];
+    $sql = "SELECT description from products where id=$name";
+    $result = $conn->query($sql);
+    $desc = $result->fetch_assoc();
+    echo $desc['description'];
+   }
+?>
+</h1>
+</td>
+</tr>
+</table>
+<section class="footer" id="footer">
             <table>
                 <tr>
                     <td>
@@ -235,8 +235,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <center>
                                         <p>
                                             <a href="Builder.php">Builder</a><br>
-                                            <a href="Builder.php">Browse Products</a><br>
-                                            <a href="Builder.php">Compare</a>
+                                            <a href="browse.php">Browse Products</a><br>
+                                            <a href="Compare.php">Compare</a>
                                         </p>
                                     </center>
                         </div>
@@ -250,9 +250,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <br>
                                     <center>
                                         <p>
-                                            <a href="about.html">About</a><br>
-                                            <a href="contact.html">Contact Us</a><br>
-                                            <a href="#">User Code Of Conduct</a>
+                                        <a href="about.php">About</a><br>
+                                        <a href="ucc.php">User Code Of Conduct</a>
                                         </p>
                                     </center>
                         </div>

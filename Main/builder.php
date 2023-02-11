@@ -232,54 +232,53 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
       <button class="clearbuild">Clear Build</button>
       <button class="savebuild">Save Build</button>
       <section class="footer" id="footer">
-         <table>
-            <tr>
-               <td>
-                  <div class="f1">
-                     <img src="image/logo.png">
-                     <br>
-                     <p>
-                        PICK PARTS.<br>
-                        BUILD YOUR PC.<br>
-                        COMPARE AND SHARE.
-                     </p>
-                  </div>
-               </td>
-               <td>
-                  <div class="f2">
-                     <center>
-                        <h1>Catergories</h1>
-                        <center>
-                           <hr>
-                           <br>
-                           <center>
-                              <p>
-                                 <a href="Builder.php">Builder</a><br>
-                                 <a href="Builder.php">Browse Products</a><br>
-                                 <a href="Builder.php">Compare</a>
-                              </p>
-                           </center>
-                  </div>
-               </td>
-               <td>
-                  <div class="f2">
-                     <center>
-                        <h1>Company</h1>
-                        <center>
-                           <hr>
-                           <br>
-                           <center>
-                              <p>
-                                 <a href="about.html">About</a><br>
-                                 <a href="contact.html">Contact Us</a><br>
-                                 <a href="#">User Code Of Conduct</a>
-                              </p>
-                           </center>
-                  </div>
-               </td>
-            </tr>
-         </table>
-      </section>
+            <table>
+                <tr>
+                    <td>
+                        <div class="f1">
+                            <img src="image/logo.png">
+                            <br>
+                            <p>
+                                PICK PARTS.<br>
+                                BUILD YOUR PC.<br>
+                                COMPARE AND SHARE.
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f2">
+                            <center>
+                                <h1>Catergories</h1>
+                                <center>
+                                    <hr>
+                                    <br>
+                                    <center>
+                                        <p>
+                                            <a href="Builder.php">Builder</a><br>
+                                            <a href="browse.php">Browse Products</a><br>
+                                            <a href="Compare.php">Compare</a>
+                                        </p>
+                                    </center>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f2">
+                            <center>
+                                <h1>Company</h1>
+                                <center>
+                                    <hr>
+                                    <br>
+                                    <center>
+                                        <p>
+                                        <a href="about.php">About</a><br>
+                                        <a href="ucc.php">User Code Of Conduct</a>
+                                        </p>
+                                    </center>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
       <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
       <!-- custom js file link  -->
       <script src="script.js"></script>

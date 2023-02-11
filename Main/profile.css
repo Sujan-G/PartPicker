@@ -309,7 +309,7 @@ h1{
 
 }
 .acc form{
-font-size: 2rem;
+font-size: 3rem;
 }
 .acc form h5{
     width:10%;
@@ -435,11 +435,12 @@ div.desc {
     font-size: 18px;
 }
 
+
 .footer {
-    background:#191b2a;
-    padding-top:2rem;
-    padding-bottom: 14rem;
+    background: #191b2a;
     margin-bottom:0rem;
+    margin-top:0rem;
+    padding:7rem;
 }
 
 .f1 {
@@ -510,12 +511,46 @@ div.desc {
     font-size: 3rem;
 
 }
-
 .fa-user:hover {
     color: #f6831e;
 }
-
-
+.ucc{
+    margin:2rem;
+}
+.ucc p{
+    background-color: #fff;
+    font-size: 2.5rem;
+}
+.about{
+    margin:4rem;
+}
+.about h2{
+    font-size: 3rem;
+}
+.about hr {
+    background-color: black;
+    height: 1px;
+    width: 100%;
+}
+.about p{
+    font-size: 2.5rem;
+}
+.browse{
+    text-align: left;
+    margin-left:5rem;
+    margin-right:5rem;
+    margin-top:5rem;
+    margin-bottom:5rem;
+}
+.browse li a{
+    font-size: 3rem;
+    text-decoration: none;
+    color: blue;
+}
+.browse li a:hover{
+    text-decoration: underline;
+    color: blue;
+}
 .success {
     background: #D4EDDA;
     color: #40754C;
@@ -524,3 +559,17 @@ div.desc {
     border-radius: 5px;
     margin: 20px auto;
  }
+.btn input{
+    background-color:red;
+    color:white;
+    margin-top:1rem;
+    margin-left:16rem;
+    padding:5px;
+    border:1px solid black;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+}
+.btn input:hover{
+    background-color:rgb(168, 9, 9);
+    
+}

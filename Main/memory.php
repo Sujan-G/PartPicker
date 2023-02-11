@@ -184,7 +184,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <!-- </center> -->
 
         </section>
-
         <section class="footer" id="footer">
             <table>
                 <tr>
@@ -209,8 +208,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <center>
                                         <p>
                                             <a href="Builder.php">Builder</a><br>
-                                            <a href="Builder.php">Browse Products</a><br>
-                                            <a href="Builder.php">Compare</a>
+                                            <a href="browse.php">Browse Products</a><br>
+                                            <a href="Compare.php">Compare</a>
                                         </p>
                                     </center>
                         </div>
@@ -224,9 +223,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <br>
                                     <center>
                                         <p>
-                                            <a href="about.html">About</a><br>
-                                            <a href="contact.html">Contact Us</a><br>
-                                            <a href="#">User Code Of Conduct</a>
+                                        <a href="about.php">About</a><br>
+                                        <a href="ucc.php">User Code Of Conduct</a>
                                         </p>
                                     </center>
                         </div>
