@@ -309,7 +309,7 @@ h1{
 
 }
 .acc form{
-font-size: 2rem;
+font-size: 3rem;
 }
 .acc form h5{
     width:10%;
@@ -438,6 +438,9 @@ div.desc {
 
 .footer {
     background: #191b2a;
+    margin-bottom:0rem;
+    margin-top:0rem;
+    padding:7rem;
 }
 
 .f1 {
@@ -556,3 +559,17 @@ div.desc {
     border-radius: 5px;
     margin: 20px auto;
  }
+.btn input{
+    background-color:red;
+    color:white;
+    margin-top:1rem;
+    margin-left:16rem;
+    padding:5px;
+    border:1px solid black;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+}
+.btn input:hover{
+    background-color:rgb(168, 9, 9);
+    
+}

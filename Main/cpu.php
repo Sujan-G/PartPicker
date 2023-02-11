@@ -173,7 +173,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                           </td>
                                         <td><?= $item['name']; ?></td>
                                             <!-- <td class="source"></td> -->
-                                            <td>&#8377 <?= $item['price']; ?></td>  
+                                            <td><?= $item['price']; ?></td>  
                                     </tr>
 
                         <?php

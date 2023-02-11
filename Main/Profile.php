@@ -138,7 +138,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <div class="links">
                 <ul>
                     <li><a href="profile.php"> Account </a></li>
-                    <li><a href="bh.php"> Build History </a></li>
+                    <li><a href="bh.php">Saved Builds</a></li>
                 </ul>
             </div>
             <div class="acc">
@@ -151,19 +151,19 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 while ($row = mysqli_fetch_assoc($result)) {
             ?>      <div class="Name">
                     <h4>
-                    <input label for="Name">Name:</label></h4>
+                    <input label for="Name">Name: </label></h4>
                   <p><?php echo $_SESSION['user_name']; ?></p>
                 </div>
                 <br>
                    <div class="Mail">
                     <h4>
-                    <input label for="email">Email:</label></h4>
+                    <input label for="email">Email: </label></h4>
                     <p><?php echo $row['email'];?></p>
                     </div>
                     <br>
                     <div class="Pass">
                         <h4>
-                        <input label for="password">Password:</label></h4>
+                        <input label for="password">Password: </label></h4>
                         <p><input type="password" id="password" name="password" placeholder="Password" value="<?php echo $row['password']; ?>" required>
                 </p>
                 </div>
@@ -172,7 +172,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             }
             ?>
             <br> 
+            <div class="btn">
             <input type="submit" value="Reset Password">
+        </div>   
             </form>
     </div>
     </section>
