@@ -133,16 +133,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <h3>Compare Specifications</h3>
             </div>
         </section>
-        <table class="table table-light table-striped table-bordered">
+        <table class="table table-light">
             <form method="post">
                 <tr>
                     <th>
-                        <div class="Compare">
+                        <div class="cm">
                             <div class="cm1">
                                 <?php include "db_conn.php";
                                 if ($r_set = $conn->query("SELECT * from products")) {
 
-                                    echo "<select name=name[] class='form-control' style='width:10rem;'>";
+                                    echo "<select name=name[] class='form-control' style='width:40rem;'>";
                                     while ($row = $r_set->fetch_assoc()) {
                                         echo "<option value=$row[id]>$row[description]</option>";
                                     }
@@ -154,12 +154,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         </div>
                     </th>
                     <th>
-                        <div class="Compare">
+                        <div class="cm">
                             <div class="cm2">
                                 <?php include "db_conn.php";
                                 if ($r_set = $conn->query("SELECT * from products")) {
 
-echo "<select name=name[] class='form-control' style='width:10rem;'>";
+echo "<select name=name[] class='form-control' style='width:40rem;'>";
 while ($row = $r_set->fetch_assoc()) {
 echo "<option value=$row[id]>$row[description]</option>";
 }

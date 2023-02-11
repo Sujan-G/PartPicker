@@ -184,7 +184,7 @@ body {
     display:inline-flex;
     border: border;
     background-color:white;
-
+    padding-left: 20rem;
 }
 .cm .form-control{
      font-size: 2rem;
@@ -194,14 +194,12 @@ body {
     background-color: white;
     color: black;
     font-family: 'Chivo Mono', monospace;
-    padding:4rem;
 }
 .cm .cm2{
     font-size: 7rem;
     background-color: white;
     color: black;
     font-family: 'Chivo Mono', monospace;   
-    padding:4rem;
 }
 .controls input{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
