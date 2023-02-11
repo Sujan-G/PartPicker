@@ -102,7 +102,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                   </table>
                </div>
             </div>
-            <a href="#Compare">Compare</a>
+            <a href="Compare.php">Compare</a>
          </nav>
          <div class="login-status">
             <a href="profile.php">
