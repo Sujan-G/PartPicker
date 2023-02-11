@@ -137,36 +137,51 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <table class="table table-light table-striped table-bordered">
                     <thead class="thead-dark">
                         <tr>
+                            <th>Image</th>
                             <th>Product</th>
                             <th>Price</th>
-                            <th>Selection</th>
+
                         </tr>
                     </thead>
                     <tbody>
-                        <tr id="Product">
-                            <td class="product"></td>
-                            <td class="selection"></td>
-                            <td class="source"></td>
+                        <?php
+                        include('db_conn.php');
+                        function getAll($products)
+                        {
+                            global $conn;
+                            $query = "SELECT * From $products where category_id ='3' ";
+                            return $query_run = mysqli_query($conn, $query);
+                        }
+
+                        $product = getAll("products");
+
+                        if (mysqli_num_rows($product) > 0) {
+                            if (empty($product)) {
+                                echo "No products";
+                            } else {
+                                foreach ($product as $item) {
+                        ?>
+
+
+
+                                    <tr id="Product">
+                                        <td>
+                                            
+                                                <img src="./Uploads/<?= $item['image']; ?>" width=70px alt="<?= $item['name']; ?>">
+                                        </td>
+                                        <td><?= $item['name']; ?></td>
+                                        <td>&#8377 <?= $item['price']; ?></td>
+                                    </tr>
+
+                        <?php
+                                }
+                            }
+                        }
+
+                        ?>
+
                         </tr>
-                        <tr id="Product">
-                            <td class="product"></td>
-                            <td class="selection"></td>
-                            <td class="source"></td>
-                        </tr>
-                        <tr id="Product">
-                            <td class="product"></td>
-                            <td class="selection"></td>
-                            <td class="source"></td>
-                        </tr>
-                        <tr id="Product">
-                            <td class="product"></td>
-                            <td class="selection"></td>
-                            <td class="source"></td>
-                        </tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        </tr>
+                    </tbody>
                     </tbody>
                 </table>
             </center>

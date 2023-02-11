@@ -132,84 +132,85 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <div class="content">
                 <h3>Compare Specifications</h3>
             </div>
-</section>
-<table class="cm">
-<form method="post">
-    <tr>
-    <th>
-    <div class="Compare">
-    <div class="cm1">
-    <?php include "db_conn.php";
- if($r_set = $conn->query("SELECT * from products")){
+        </section>
+        <table class="cm">
+            <form method="post">
+                <tr>
+                    <th>
+                        <div class="Compare">
+                            <div class="cm1">
+                                <?php include "db_conn.php";
+                                if ($r_set = $conn->query("SELECT * from products")) {
 
-    echo "<select name=name[] class='form-control' style='width:100px;'>";
-while ($row = $r_set->fetch_assoc()) {
-echo "<option value=$row[id]>$row[name]</option>";
-}
-echo "</select>";
-}else{
-echo $conn->error;
-}
-?> </div>
-</div></th>
-<th>
-        <div class="Compare">
-            <div class="cm2">
-           <?php include "db_conn.php";
- if($r_set = $conn->query("SELECT * from products")){
+                                    echo "<select name=name[] class='form-control' style='width:100px;'>";
+                                    while ($row = $r_set->fetch_assoc()) {
+                                        echo "<option value=$row[id]>$row[name]</option>";
+                                    }
+                                    echo "</select>";
+                                } else {
+                                    echo $conn->error;
+                                }
+                                ?> </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="Compare">
+                            <div class="cm2">
+                                <?php include "db_conn.php";
+                                if ($r_set = $conn->query("SELECT * from products")) {
 
-echo "<select name=name[] class='form-control' style='width:100px;'>";
-while ($row = $r_set->fetch_assoc()) {
-echo "<option value=$row[id]>$row[name]</option>";
-}
-echo "</select>";
-}else{
-echo $conn->error;
-}
-?>
-    </div>
-</div>
-</th>
-</tr>
-<tr>
-<br>
-<center><div class="controls">
-        <input type="submit" name='Compare' value="Compare">
-    </div></center>
-</tr>
-</form>
-<tr>
-<br>
-<td>
-<h1>
-<?php
-   if(isset($_POST['Compare']))
-   {
-    $name=$_POST['name'][0];
-    $sql = "SELECT description from products where id=$name";
-    $result = $conn->query($sql);
-    $desc = $result->fetch_assoc();
-    echo $desc['description'];
-   }
-?>
-</h1>
-</td>
-<td>
-<h1>
-<?php
-   if(isset($_POST['Compare']))
-   {
-    $name=$_POST['name'][1];
-    $sql = "SELECT description from products where id=$name";
-    $result = $conn->query($sql);
-    $desc = $result->fetch_assoc();
-    echo $desc['description'];
-   }
-?>
-</h1>
-</td>
-</tr>
-</table>
+                                    echo "<select name=name[] class='form-control' style='width:100px;'>";
+                                    while ($row = $r_set->fetch_assoc()) {
+                                        echo "<option value=$row[id]>$row[name]</option>";
+                                    }
+                                    echo "</select>";
+                                } else {
+                                    echo $conn->error;
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <br>
+                    <center>
+                        <div class="controls">
+                            <input type="submit" name='Compare' value="Compare">
+                        </div>
+                    </center>
+                </tr>
+            </form>
+            <tr>
+                <br>
+                <td>
+                    <h1>
+                        <?php
+                        if (isset($_POST['Compare'])) {
+                            $name = $_POST['name'][0];
+                            $sql = "SELECT description from products where id=$name";
+                            $result = $conn->query($sql);
+                            $desc = $result->fetch_assoc();
+                            echo $desc['description'];
+                        }
+                        ?>
+                    </h1>
+                </td>
+                <td>
+                    <h1>
+                        <?php
+                        if (isset($_POST['Compare'])) {
+                            $name = $_POST['name'][1];
+                            $sql = "SELECT description from products where id=$name";
+                            $result = $conn->query($sql);
+                            $desc = $result->fetch_assoc();
+                            echo $desc['description'];
+                        }
+                        ?>
+                    </h1>
+                </td>
+            </tr>
+        </table>
         <section class="footer" id="footer">
             <table>
                 <tr>
@@ -262,11 +263,12 @@ echo $conn->error;
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <!-- custom js file link  -->
         <script src="script.js"></script>
-</body>
+    </body>
 <?php
-}else {
+} else {
     header("Location: login.php");
     exit();
 }
 ?>
-</html>
+
+    </html>

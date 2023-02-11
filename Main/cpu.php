@@ -152,7 +152,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         function getAll($products)
                         {
                             global $conn;
-                            $query = "SELECT * From $products where status ='0' ";
+                            $query = "SELECT * From $products where category_id ='1' ";
                             return $query_run = mysqli_query($conn, $query);
                         }
 
@@ -169,8 +169,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
                                     <tr id="Product">
                                     <td>
+                                        <div class="image">
                             <img src="./Uploads/<?= $item['image'];?>"  width=70px alt="<?= $item['name']; ?>">
                           </td>
+                                </div>
                                         <td><?= $item['name']; ?></td>
                                             <!-- <td class="source"></td> -->
                                             <td>&#8377 <?= $item['price']; ?></td>  
