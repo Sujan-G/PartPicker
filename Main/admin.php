@@ -41,14 +41,14 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
       <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
         <ul class="navbar-nav">
 
-        <li class="nav-item">
-            <a class="nav-link text-white" href="category.php">
+        
+            
+        <a class="nav-link text-white active bg-gradient-primary" href="category.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">table_view</i>
               </div>
               <span class="nav-link-text ms-1">All Categories</span>
             </a>
-          </li>
 
           <li class="nav-item">
             <a class="nav-link text-white" href="category.php">
@@ -74,17 +74,7 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
               </div>
               <span class="nav-link-text ms-1">Add Item</span>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white active bg-gradient-primary" href="#">
-              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10">receipt_long</i>
-              </div>
-              <span class="nav-link-text ms-1">Billing</span>
-            </a>
-          </li>
-
-         
+          </li>         
         </ul>
       </div>
       <div class="sidenav-footer position-absolute w-100 bottom-0 ">
@@ -96,81 +86,70 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
 
       <!-- End Navbar -->
-      <div class="container-fluid py-4">
-        <h2 class="font-weight-bolder mb-0">General Statistics</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-5 col-sm-5 mt-sm-0 mt-4">
-          <div class="card  mb-2">
-            <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">weekend</i>
+      
+    <main class="main-content">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="font-weight-bold mb-1">Categories</h3>
               </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Bookings</p>
-                <h4 class="mb-0">281</h4>
-              </div>
-            </div>
+              <div class="card-body">
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>Image</th>
+                      <th>Status</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    include('db_conn.php');
+                    function getAll($categories)
+                    {
+                      global $conn;
+                      $query = "SELECT * FROM $categories";
+                      return $query_run = mysqli_query($conn, $query);
+                    }
 
-            <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than last week</p>
+                    $category = getAll("categories");
+
+                    if (mysqli_num_rows($category) > 0) {
+                      foreach ($category as $item) {
+                    ?>
+                        <tr>
+                          <td><?= $item['category_id']; ?></td>
+                          <td><?= $item['name']; ?></td>
+                          <td>
+                            <img src="./Uploads/<?= $item['image']; ?>" width=70px alt="<?= $item['name']; ?>">
+                          </td>
+                          <td><?= $item['status'] == '1' ? "Visible" : "Hidden" ?></td>
+                          <td>
+                            <form action="code.php" method="POST">
+                              <input type="hidden" value="<?= $item['category_id']; ?>" name="category_id">
+                              <button type="submit" class="btn btn-danger" name="delete_category_btn">Delete
+                            </form>
+                          </td>
+                        </tr>
+
+                    <?php
+                      }
+                    } else {
+                      echo "No Records Found";
+                    }
+                    ?>
+
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-
-          <div class="card  mb-2">
-            <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary shadow text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">leaderboard</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Today's Users</p>
-                <h4 class="mb-0">2,300</h4>
-              </div>
-            </div>
-
-            <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p>
-            </div>
-          </div>
-
         </div>
-        <div class="col-lg-5 col-sm-5 mt-sm-0 mt-4">
-          <div class="card  mb-2">
-            <div class="card-header p-3 pt-2 bg-transparent">
-              <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">store</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize ">Revenue</p>
-                <h4 class="mb-0 ">34k</h4>
-              </div>
-            </div>
-
-            <hr class="horizontal my-0 dark">
-            <div class="card-footer p-3">
-              <p class="mb-0 "><span class="text-success text-sm font-weight-bolder">+1% </span>than yesterday</p>
-            </div>
-          </div>
-
-          <div class="card ">
-            <div class="card-header p-3 pt-2 bg-transparent">
-              <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">person_add</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize ">Followers</p>
-                <h4 class="mb-0 ">+91</h4>
-              </div>
-            </div>
-
-            <hr class="horizontal my-0 dark">
-            <div class="card-footer p-3">
-              <p class="mb-0 ">Just updated</p>
-            </div>
-          </div>
+      </div>
   </body>
 <?php
 } else {

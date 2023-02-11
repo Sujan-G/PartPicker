@@ -83,23 +83,12 @@ if (isset($_SESSION['id']) || isset($_SESSION['user_name'])) {
               <span class="nav-link-text ms-1">Add Category</span>
             </a>
           </li>
-
-
-
           <li class="nav-item">
             <a class="nav-link text-white " href="add_item.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">add</i>
               </div>
               <span class="nav-link-text ms-1">Add Item</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">
-              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10">receipt_long</i>
-              </div>
-              <span class="nav-link-text ms-1">Billing</span>
             </a>
           </li>
         </ul>
