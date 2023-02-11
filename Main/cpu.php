@@ -4,6 +4,7 @@ session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 ?>
+
     <!DOCTYPE html>
     <html lang="en">
 
@@ -143,10 +144,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             <th>Image</th>
                             <th>Product</th>
                             <th>Price</th>
-
                         </tr>
                     </thead>
                     <tbody>
+                    <form action="builder.php" method="get">
                         <?php
                         include('db_conn.php');
                         function getAll($products)
@@ -166,7 +167,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         ?>
 
 
-
+                                    
                                     <tr id="Product">
                                     <td>
                                         <div class="image">
@@ -175,22 +176,23 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 </div>
                                         <td><?= $item['name']; ?></td>
                                             <!-- <td class="source"></td> -->
-                                            <td><?= $item['price']; ?>&#160;&#160;&#160;<a class="btn btn-primary btn-lg" href="#" role="button">ADD</button></td> 
+                                            <td><?= $item['price']; ?>&#160;&#160;&#160;<button class="btn btn-primary btn-lg" type='submit' name="item" value="<?= $item['id']; ?>">add</td> 
                                     </tr>
                                     
 
                         <?php
+                       
                                 }
                             }
                         }
 
                         ?>
-
+                        
                         </tr>
+                  
                     </tbody>
+                    </form>
                 </table>
-            <!-- </center> -->
-
         </section>
 
         <section class="footer" id="footer">

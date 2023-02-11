@@ -144,6 +144,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         </tr>
                     </thead>
                     <tbody>
+                    <form action="builder.php" method="get">
                         <?php
                         include('db_conn.php');
                         function getAll($products)
@@ -170,7 +171,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                             <img src="./Uploads/<?= $item['image']; ?>" width=70px alt="<?= $item['name']; ?>">
                                         </td>
                                         <td><?= $item['name']; ?></td>
-                                        <td>&#8377 <?= $item['price']; ?>&#160;&#160;&#160;<a class="btn btn-primary btn-lg" href="#" role="button">ADD</button></td>
+                                        <td>&#8377 <?= $item['price']; ?>&#160;&#160;&#160;<button class="btn btn-primary btn-lg" type='submit' name="item" value="<?= $item['id']; ?>">add</td>
                                     </tr>
 
                         <?php

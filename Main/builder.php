@@ -2,8 +2,13 @@
 session_start();
 
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
-
-?>
+                  include('db_conn.php');
+                  global $conn;
+                  $id=$_GET['item'];
+                  $sql = "SELECT * from products where id=$id";
+                  $result = $conn->query($sql);
+              
+ ?>
    <!DOCTYPE html>
    <html lang="en">
 
@@ -135,7 +140,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                   <tr>
                      <th>Category</th>
                      <th>Selection</th>
-                     <th>Source</th>
+                     <th>Image</th>
                      <th>Price</th>
                      <th>Add/Delete</th>
                   </tr>
@@ -143,15 +148,18 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                <tbody>
                   <tr id="processor">
                      <td class="category lead">Processor</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
+                     <?php  while ($item = $result->fetch_assoc()){?>
+                     <td class="selection"><?php echo $item['name'] ?></td>
+                     <td class="image"><img src="./Uploads/<?= $item['image'];?>"  width=70px alt="<?= $item['name']; ?>"></td>
+                     <td class="price text-right"><?php echo $item['price'] ?></td>
+                     <?php }?>
                      <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "cpu.php" role="button">Add Processor</td>
                   </tr>
                   <tr id="motherboard">
                      <td class="category lead">Motherboard</td>
+                     <?php ?>
                      <td class="selection"></td>
-                     <td class="source"></td>
+                     <td class="image"></td>
                      <td class="price text-right"></td>
                      <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "motherboard.php" role="button">Add Motherboard</td>
                   </tr>
