@@ -477,7 +477,7 @@ hr {
 }
 
 /* Clear build button css */
-.clearbuild {
+.Clearbuild {
     border: var(--border);
     background-color: rgba(239, 52, 1, 0.947);
     color: #fff;
@@ -491,7 +491,7 @@ hr {
     font-size: 14px;
 }
 
-.clearbuild:hover {
+.Clearbuild:hover {
     background-color: rgb(215, 38, 38);
 }
 
@@ -500,7 +500,7 @@ hr {
     border: var(--border);
     background-color: rgba(63, 177, 35, 0.947);
     color: #fff;
-    margin-left: 1%;
+    margin-left: 4%;
     margin-bottom: 2%;
     width: 7%;
     padding-top: 8px;
@@ -514,3 +514,7 @@ hr {
 .savebuild:hover {
     background-color: rgb(75, 141, 36);
 }
+
+
+
+
