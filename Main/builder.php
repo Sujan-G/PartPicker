@@ -238,7 +238,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                          ?>
             </center>
         </section>
-        <button class="Clearbuild" type='submit' name="clear" value="<?= $item['id']; ?>">Clear All
+        <button class="Clearbuild" type='submit' name="all" value="all">Clear All
             </form>
             <button class="savebuild">Buy Build</button>
             <section class="footer" id="footer">
@@ -290,6 +290,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 </table>
             </section>
             <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+            <script>
+                <?php if (isset($_SESSION['message'])) { ?>
+
+                    alertify.set('notifier', 'position', 'top-right');
+                    alertify.success('<?= $_SESSION['message'] ?>');
+                <?php
+                    unset($_SESSION['message']);
+                }
+                ?>
+            </script>
             <!-- custom js file link  -->
             <script src="script.js"></script>
     </body>
