@@ -345,10 +345,21 @@ hr {
 
 }
 
+.totalprice {
+    display: inline-flex;
+}
+.totalprice h4{
+    color:red;
+    font-size: 2rem;
+}
+.totalprice h5{
+    font-size: 2rem;
+}
 .footer {
     background: #191b2a;
-    ;
-    margin-top: 0;
+    margin-bottom:0rem;
+    margin-top:0rem;
+    padding:7rem;
 }
 
 .f1 {
