@@ -138,7 +138,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         <div class="cm">
                             <div class="cm1">
                                 <?php include "db_conn.php";
-                                if ($r_set = $conn->query("SELECT * from products")) {
+                                if ($r_set = $conn->query("SELECT * from products where category_id='1'")) {
 
                                     echo "<select name=name[] class='form-control' style='width:40rem;'>";
                                     while ($row = $r_set->fetch_assoc()) {
@@ -155,7 +155,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         <div class="cm">
                             <div class="cm2">
                                 <?php include "db_conn.php";
-                                if ($r_set = $conn->query("SELECT * from products")) {
+                                if ($r_set = $conn->query("SELECT * from products where category_id='1'")) {
 
 echo "<select name=name[] class='form-control' style='width:40rem;'>";
 while ($row = $r_set->fetch_assoc()) {
