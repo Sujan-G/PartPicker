@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2023 at 02:12 PM
+-- Generation Time: Feb 12, 2023 at 09:36 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `test_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `builds`
+--
+
+CREATE TABLE `builds` (
+  `b_id` int(2) NOT NULL,
+  `id` int(1) DEFAULT NULL,
+  `category_id` int(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -157,6 +169,12 @@ INSERT INTO `users` (`id`, `user_name`, `password`, `email`, `token`) VALUES
 --
 
 --
+-- Indexes for table `builds`
+--
+ALTER TABLE `builds`
+  ADD PRIMARY KEY (`b_id`);
+
+--
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
@@ -177,6 +195,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `builds`
+--
+ALTER TABLE `builds`
+  MODIFY `b_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `products`
