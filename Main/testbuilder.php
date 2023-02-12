@@ -114,9 +114,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             </div>
             <div class="icons">
                 <div class="fas fa-bars" id="menu-btn"></div>
-                <div class="fas fa-search" id="search-btn"></div>
-                <div class="fas fa-shopping-cart" id="cart-btn"></div>
-                <a href="logout.php">
+                <a href="builder.php">  <div class="fas fa-shopping-cart" id="cart-btn"></div></a>                <a href="logout.php">
                     <div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn"></div>
                 </a>
             </div>
