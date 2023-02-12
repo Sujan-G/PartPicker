@@ -3,6 +3,7 @@ session_start();
 include('db_conn.php');
 include('redirect.php');
 if (isset($_POST['add_category_btn'])) {
+    $category_id = $_POST['category_id'];
     $name = $_POST['name'];
     $description = $_POST['description'];
     $image = $_FILES['image']['name'];
@@ -13,8 +14,8 @@ if (isset($_POST['add_category_btn'])) {
     $image_ext = pathinfo($image, PATHINFO_EXTENSION);
     $filename = $image;
 
-    $cate_query = "INSERT INTO categories (name,description,image,meta_title,status,popular)
-  VALUES ('$name','$description','$image','$meta_title','$status','$popular')";
+    $cate_query = "INSERT INTO categories (category_id,name,description,image,meta_title,status,popular)
+  VALUES ('$category_id','$name','$description','$image','$meta_title','$status','$popular')";
 
     $cate_query_run = mysqli_query($conn, $cate_query);
 
@@ -69,7 +70,7 @@ elseif (isset($_POST['delete_category_btn']))
 elseif (isset($_POST['delete_items_btn']))
 {
     $item_id = mysqli_real_escape_string($conn,$_POST['item_id']);
-    $delete_query="DELETE FROM products WHERE category_id='$item_id'";
+    $delete_query="DELETE FROM products WHERE id='$item_id'";
     $delete_query_run=mysqli_query($conn,$delete_query);
   
 
