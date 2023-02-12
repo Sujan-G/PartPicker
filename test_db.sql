@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2023 at 03:46 PM
+-- Generation Time: Feb 12, 2023 at 08:03 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -81,8 +81,8 @@ INSERT INTO `categories` (`category_id`, `name`, `description`, `image`, `meta_t
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
-  `name` varchar(191) NOT NULL,
-  `description` mediumtext NOT NULL,
+  `description` varchar(191) NOT NULL,
+  `name` mediumtext NOT NULL,
   `image` varchar(191) NOT NULL,
   `meta_keywords` mediumtext NOT NULL,
   `price` int(11) NOT NULL,
@@ -94,7 +94,7 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `name`, `description`, `image`, `meta_keywords`, `price`, `slug`, `status`) VALUES
+INSERT INTO `products` (`id`, `category_id`, `description`, `name`, `image`, `meta_keywords`, `price`, `slug`, `status`) VALUES
 (1, 1, '10th Gen Intel® Core™ i3-10100 Desktop Processor 6M Cache, 4 Cores up to 4.3GHz LGA 1200 (Intel® 400 Series Chipset) 65W', 'Intel Processors', 'i31010.jpg', 'Processor', 9650, 'intel', 0),
 (2, 1, '10th Gen Intel® Core™ i3-10105F Desktop Processor 4 Cores up to 4.4GHz Without Processor Graphics LGA 1200 (Intel® 400 Series Chipset) 65W', 'Intel Processors', 'i31010f.jpg', 'Processor', 6000, 'intel', 0),
 (3, 1, '9th Gen Intel® Core™ i3-9100F Desktop Processor 4 Cores up to 4.2GHz Without Processor Graphics LGA 1151 (Intel® 300 Series Chipset) 65W BX80684i39100F', 'Intel Processors', 'i39100f.jpg', 'Processor', 6900, 'intel', 0),

@@ -117,9 +117,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
             <div class="icons">
                 <div class="fas fa-bars" id="menu-btn"></div>
-                <div class="fas fa-search" id="search-btn"></div>
-                <div class="fas fa-shopping-cart" id="cart-btn"></div>
-                <a href="logout.php">
+                <a href="builder.php">  <div class="fas fa-shopping-cart" id="cart-btn"></div></a>                <a href="logout.php">
                     <div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn"></div>
                 </a>
             </div>
@@ -140,11 +138,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         <div class="cm">
                             <div class="cm1">
                                 <?php include "db_conn.php";
-                                if ($r_set = $conn->query("SELECT * from products")) {
+                                if ($r_set = $conn->query("SELECT * from products where category_id='1'")) {
 
                                     echo "<select name=name[] class='form-control' style='width:40rem;'>";
                                     while ($row = $r_set->fetch_assoc()) {
-                                        echo "<option value=$row[id]>$row[description]</option>";
+                                        echo "<option value=$row[id]>$row[name]</option>";
                                     }
                                     echo "</select>";
                                 } else {
@@ -157,11 +155,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         <div class="cm">
                             <div class="cm2">
                                 <?php include "db_conn.php";
-                                if ($r_set = $conn->query("SELECT * from products")) {
+                                if ($r_set = $conn->query("SELECT * from products where category_id='1'")) {
 
 echo "<select name=name[] class='form-control' style='width:40rem;'>";
 while ($row = $r_set->fetch_assoc()) {
-echo "<option value=$row[id]>$row[description]</option>";
+echo "<option value=$row[id]>$row[name]</option>";
 }
 echo "</select>";
 }else{
@@ -187,10 +185,10 @@ echo $conn->error;
    if(isset($_POST['Compare']))
    {
     $name=$_POST['name'][0];
-    $sql = "SELECT name from products where id=$name";
+    $sql = "SELECT description from products where id=$name";
     $result = $conn->query($sql);
     $desc = $result->fetch_assoc();
-    echo $desc['name'];
+    echo $desc['description'];
    }
 ?>
 </h1>
@@ -201,10 +199,10 @@ echo $conn->error;
    if(isset($_POST['Compare']))
    {
     $name=$_POST['name'][1];
-    $sql = "SELECT name from products where id=$name";
+    $sql = "SELECT description from products where id=$name";
     $result = $conn->query($sql);
     $desc = $result->fetch_assoc();
-    echo $desc['name'];
+    echo $desc['description'];
    }
 ?>
 </h1>
