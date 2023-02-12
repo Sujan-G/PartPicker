@@ -184,11 +184,11 @@ echo $conn->error;
 <?php
    if(isset($_POST['Compare']))
    {
-    $name=$_POST['description'][0];
-    $sql = "SELECT name from products where id=$name";
+    $name=$_POST['name'][0];
+    $sql = "SELECT description from products where id=$name";
     $result = $conn->query($sql);
     $desc = $result->fetch_assoc();
-    echo $desc['name'];
+    echo $desc['description'];
    }
 ?>
 </h1>
@@ -198,8 +198,8 @@ echo $conn->error;
 <?php
    if(isset($_POST['Compare']))
    {
-    $name=$_POST['description'][1];
-    $sql = "SELECT name from products where id=$name";
+    $name=$_POST['name'][1];
+    $sql = "SELECT description from products where id=$name";
     $result = $conn->query($sql);
     $desc = $result->fetch_assoc();
     echo $desc['description'];
