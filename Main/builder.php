@@ -186,7 +186,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 <td class="category lead"><?= $item['meta_keywords']; ?></td>
                                 <td class="selection"><?= $item['name']; ?></td>
                                 <td class="source"><img src="./Uploads/<?= $item['image']; ?>" width=90px alt="<?= $item['name']; ?>"></td>
-                                <td class="price text-right">₹<?= $item['price']; ?></td>
+                                <td class="price text-center">₹<?= $item['price']; ?></td>
 
                                 <td class="ref"><a class="btn btn-outline-primary btn-lg" href="cpu.php" role="button">Add <?= $item['meta_keywords']; ?></a></button><br>&#160;&#160;&#160;&#160;&#160;
                                     <button class="btn btn-outline-danger btn-lg" type='submit' name="clear" value="<?= $item['id']; ?>">Remove <?= $item['meta_keywords']; ?>
