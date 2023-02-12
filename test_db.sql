@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2023 at 02:48 PM
+-- Generation Time: Feb 12, 2023 at 03:46 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,16 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `builds` (
   `b_id` int(2) NOT NULL,
   `id` int(1) DEFAULT NULL,
-  `category_id` int(1) DEFAULT NULL
+  `category_id` int(1) DEFAULT NULL,
+  `price` int(6) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `builds`
 --
 
-INSERT INTO `builds` (`b_id`, `id`, `category_id`) VALUES
-(0, 1, 1),
-(0, 24, 4);
+INSERT INTO `builds` (`b_id`, `id`, `category_id`, `price`) VALUES
+(0, 1, 1, 9650),
+(0, 24, 4, 11990);
 
 -- --------------------------------------------------------
 
@@ -169,7 +170,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `user_name`, `password`, `email`, `token`) VALUES
 (1, 'admin', '0192023a7bbd73250516f069df18b500', 'admin@mail.com', 'e6d47446e698dcf80c3b3a9175b10e81878b05dc1f515f74c858ddf5d6fdfdef'),
 (5, 'cyber', 'b59c67bf196a4758191e42f76670ceba', 'cyberghostganji@gmail.com', '03257d17a5eb3362ffc70cea2789a84dfb7428aa01be01f3ccffa743c4003233'),
-(7, 'ss', '934b535800b1cba8f96a5d72f72f1611', 'sujansuji2009@gmail.com', 'b2e281bfc68daf422b5eeb32dc2269b8324c8cfb3416d0080df29a42abef0f75');
+(7, 'ss', '934b535800b1cba8f96a5d72f72f1611', 'sujansuji2009@gmail.com', 'b2e281bfc68daf422b5eeb32dc2269b8324c8cfb3416d0080df29a42abef0f75'),
+(8, 'void', '202cb962ac59075b964b07152d234b70', 'thejaswi4uns@gmail.com', '5ffac5cc0438614858203d5e6d363e33d174ffe72d4ad12ff97ff1365f1d6ca0');
 
 --
 -- Indexes for dumped tables
@@ -207,7 +209,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
