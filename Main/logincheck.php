@@ -44,7 +44,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
 			if ($row['user_name'] === $admin && $row['password'] === $adminpass) {
 				$_SESSION['user_name'] = $row['user_name'];
-				header("Location: admin.php");
+				header("Location: category.php");
 				exit();
 			} else if ($row['user_name'] === $uname && $row['password'] === $pass) {
 				$_SESSION['user_name'] = $row['user_name'];

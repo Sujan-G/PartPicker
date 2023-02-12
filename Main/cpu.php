@@ -176,7 +176,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 </div>
                                         <td><?= $item['name']; ?></td>
                                             <!-- <td class="source"></td> -->
-                                            <td><?= $item['price']; ?>&#160;&#160;&#160;<button class="btn btn-primary btn-lg" type='submit' name="item" value="<?= $item['id']; ?>">add</td> 
+                                            <td><?= $item['price']; ?>&#160;&#160;&#160;<button class="btn btn-primary btn-lg" type='submit' name="item" value="<?= $item['id']; ?>">   Add</td> 
                                     </tr>
                                     
 
