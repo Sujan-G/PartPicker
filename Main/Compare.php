@@ -128,7 +128,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </header>
         <section class="Compare">
             <div class="content">
-                <h3>Compare Specifications</h3>
+                <h3>Compare Processors</h3>
             </div>
         </section>
         <table class="table table-light">
