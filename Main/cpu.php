@@ -147,7 +147,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         </tr>
                     </thead>
                     <tbody>
-                    <form action="builder.php" method="get">
+                    <form action="partadd.php" method="get">
                         <?php
                         include('db_conn.php');
                         function getAll($products)

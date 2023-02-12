@@ -2,13 +2,10 @@
 session_start();
 
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
-                  include('db_conn.php');
-                  global $conn;
-                  $id=$_GET['item'];
-                  $sql = "SELECT * from products where id=$id";
-                  $result = $conn->query($sql);
-              
- ?>
+                  
+                        ?>
+
+                                   
    <!DOCTYPE html>
    <html lang="en">
 
@@ -145,94 +142,48 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                      <th>Add/Delete</th>
                   </tr>
                </thead>
-               <tbody>
-                  <tr id="processor">
-                     <td class="category lead">Processor</td>
-                     <?php  while ($item = $result->fetch_assoc()){?>
-                     <td class="selection"><?php echo $item['name'] ?></td>
-                     <td class="image"><img src="./Uploads/<?= $item['image'];?>"  width=70px alt="<?= $item['name']; ?>"></td>
-                     <td class="price text-right"><?php echo $item['price'] ?></td>
-                     <?php }?>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "cpu.php" role="button">Add Processor</td>
-                  </tr>
-                  <tr id="motherboard">
-                     <td class="category lead">Motherboard</td>
-                     <?php ?>
-                     <td class="selection"></td>
-                     <td class="image"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "motherboard.php" role="button">Add Motherboard</td>
-                  </tr>
-                  <tr id="gpu">
-                     <td class="category lead">Graphics Card</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "videocard.php" role="button">Add Graphic Card</td>
-                  </tr>
-                  <tr id="psu">
-                     <td class="category lead">Power Supply</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "powersupply.php" role="button">Add Power Supply</td>
-                  </tr>
-                  <tr id="cabinet">
-                     <td class="category lead">Cabinet</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "case.php" role="button">Add Cabinet</td>
-                  </tr>
-                  <tr id="memory">
-                     <td class="category lead">Memory (RAM)</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "memory.php" role="button">Add Memory</td>
-                  </tr>
-                  <tr id="memory2">
-                     <td class="category lead">Additional Memory (RAM)</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "memory.php" role="button">Add Memory</td>
-                  </tr>
-                  <tr id="hdd">
-                     <td class="category lead">Hard disk drive (HDD)</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "memory.php" role="button">Add Hard disk</td>
-                  </tr>
-                  <tr id="ssd">
-                     <td class="category lead">Solid State Disk (SSD)</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "memory.php" role="button">Add SSD</td>
-                  </tr>
-                  <!-- <tr id="monitor">
-                     <td class="category lead">Monitor</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><button type="button" class="btn btn-outline-primary btn-lg">Add Monitor</td>
-                  </tr> -->
-                  <tr id="cooler">
-                     <td class="category lead">CPU cooler</td>
-                     <td class="selection"></td>
-                     <td class="source"></td>
-                     <td class="price text-right"></td>
-                     <td class="ref"><a class="btn btn-outline-primary btn-lg" href = "cpucooler.php" role="button">Add Cpu Cooler</td>
-                  </tr>
-                  <tr id="totals">
-                     <td></td>
-                     <td></td>
-                     <td><strong>Grand Total</strong></td>
-                     <td class="price text-right"></td>
-                     <td></td>
-                  </tr>
+               <table class="table table-light table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Price</th>
+
+                        </tr>
+               
+               <?php         include('db_conn.php');
+                  global $conn;
+          
+                  function getAll($products)
+                        {
+                            global $conn;
+                            $query = "SELECT * From products p, builds b WHERE p.id=b.id";
+                            return $query_run = mysqli_query($conn, $query);
+                        }
+
+                        $product = getAll("products");
+
+                        if (mysqli_num_rows($product) > 0) {
+                            if (empty($product)) {
+                                echo "No products";
+                            } else {
+                                foreach ($product as $item) { ?>
+                    </thead>
+                    <tbody>
+                     <tr id="Product">
+                               <td>
+                            <img src="./Uploads/<?= $item['image'];?>" width=90px alt="<?= $item['name']; ?>">
+                          </td>
+                                        <td><?= $item['name']; ?></td>
+                                            <td>&#8377 <?= $item['price']; ?>&#160;&#160;&#160;</td>  
+                                    </tr>
+
+                        <?php
+                                }
+                            }
+                        }
+
+                        ?>
                </tbody>
             </table>
          </center>
