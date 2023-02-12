@@ -172,37 +172,48 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     echo "No products";
                                 } else {
                                     foreach ($product as $item) { ?>
-                                    </thead>
+                                        </thead>
 
-                            
 
-                                        
+
+
                         <tbody>
 
                             <!-- <tr id="Product"> -->
                             <tr id="processor">
-                           
-                              
+
+
                                 <td class="category lead"><?= $item['meta_keywords']; ?></td>
                                 <td class="selection"><?= $item['name']; ?></td>
                                 <td class="source"><img src="./Uploads/<?= $item['image']; ?>" width=90px alt="<?= $item['name']; ?>"></td>
                                 <td class="price text-right">₹<?= $item['price']; ?></td>
 
                                 <td class="ref"><a class="btn btn-outline-primary btn-lg" href="cpu.php" role="button">Add <?= $item['meta_keywords']; ?></a></button><br>&#160;&#160;&#160;&#160;&#160;
-                                <button class="btn btn-outline-danger btn-lg" type='submit' name="clear" value="<?= $item['id']; ?>">Remove <?= $item['meta_keywords']; ?> </td></a>
+                                    <button class="btn btn-outline-danger btn-lg" type='submit' name="clear" value="<?= $item['id']; ?>">Remove <?= $item['meta_keywords']; ?>
+                                </td></a>
                                 <table class="table table-light table-striped table-bordered">
                                     <thead class="thead-dark">
+                                        
 
-                                </tr>
-                               <?php
+                            </tr>
+
+                           
+                    <?php
 
                                     }
                                 }
                             }
 
-                ?>
+                    ?>
+                    
                         </tbody>
                 </table>
+                <tr id="totals">
+                                <td></td>
+                                <td></td>
+                                <td><strong>Grand Total</strong></td>
+                                <td class="price text-right"></td>
+                                <td></td>
             </center>
         </section>
 

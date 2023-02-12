@@ -120,7 +120,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                <div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn"></div>
             </a>
          </div>
-         <form action="" class="search-form">
+         <form action="#" class="search-form">
             <input type="search" id="search-box" placeholder="search here...">
             <label for="search-box" class="fas fa-search"></label>
          </form>
@@ -133,6 +133,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
       <section class="builder">
          <center>
             <table class="table table-light table-striped table-bordered ">
+               <form action="clearbuild.php" method="POST">
                <thead class="thead-dark">
                   <tr>
                      <th>Category</th>
@@ -142,18 +143,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                      <th>Add/Delete</th>
                   </tr>
                </thead>
+               <tbody>
                <table class="table table-light table-striped table-bordered">
                     <thead class="thead-dark">
-                        <tr>
-                            <th>Image</th>
-                            <th>Product</th>
-                            <th>Price</th>
-
-                        </tr>
+                   <tr>
                
                <?php         include('db_conn.php');
                   global $conn;
-          
+
                   function getAll($products)
                         {
                             global $conn;
@@ -175,10 +172,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             <img src="./Uploads/<?= $item['image'];?>" width=90px alt="<?= $item['name']; ?>">
                           </td>
                                         <td><?= $item['name']; ?></td>
-                                            <td>&#8377 <?= $item['price']; ?>&#160;&#160;&#160;</td>  
-                                    </tr>
+                                            <td>&#8377 <?= $item['price']; ?>&#160;&#160;&#160;&#160;&#160;<button class="btn btn-info btn-lg" type='submit' name="clear" value="<?= $item['id'];?>">Remove</td>  
+                                </tr>
+                                    
 
                         <?php
+                        
                                 }
                             }
                         }
@@ -188,8 +187,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             </table>
          </center>
       </section>
-      <button class="clearbuild">Clear Build</button>
-      <button class="savebuild">Save Build</button>
+    
+      <button class="btn btn-primary btn-lg" type='submit' name="clear" value="<?= $item['id'];?>">Clear
+      </form>
+         <button class="savebuild">Save Build</button>
       <section class="footer" id="footer">
             <table>
                 <tr>

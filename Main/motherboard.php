@@ -122,7 +122,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn"></div>
                 </a>
             </div>
-            <form action="" class="search-form">
+            <form action="partadd.php" class="search-form">
                 <input type="search" id="search-box" placeholder="search here...">
                 <label for="search-box" class="fas fa-search"></label>
             </form>
