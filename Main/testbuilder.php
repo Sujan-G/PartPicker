@@ -208,12 +208,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     
                         </tbody>
                 </table>
-                <tr id="totals">
-                                <td></td>
-                                <td></td>
-                                <td><strong>Grand Total</strong></td>
-                                <td class="price text-right"></td>
-                                <td></td>
+                <div class="totalprice">
+                <h4>Grand Total: </h4>
+                <?php  include('db_conn.php');
+                         global $conn; 
+                         $query = "SELECT sum(price) FROM builds";
+                         $result = mysqli_query($conn, $query);
+                         $row = mysqli_fetch_array($result);
+                         $sum = $row[0];
+                         ?>&#160;&#160;&#160;<h5>&#8377 <?php echo $sum;
+                         ?></h5>
             </center>
         </section>
 
