@@ -133,16 +133,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             </div>
         </section>
         <section class="products">
-        <table class="table table-light table-striped table-bordered">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Image</th>
-                            <th>Product</th>
-                            <th>Price</th>
+            <table class="table table-light table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
 
-                        </tr>
-                    </thead>
-                    <tbody>
+                    </tr>
+                </thead>
+                <tbody>
+                    <form action="partadd.php" method="get">
                         <?php
                         include('db_conn.php');
                         function getAll($products)
@@ -164,11 +165,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 
                                     <tr id="Product">
-                                    <td>
-                            <img src="./Uploads/<?= $item['image'];?>" width=90px alt="<?= $item['name']; ?>">
-                          </td>
+                                        <td>
+                                            <img src="./Uploads/<?= $item['image']; ?>" width=90px alt="<?= $item['name']; ?>">
+                                        </td>
                                         <td><?= $item['name']; ?></td>
-                                            <td>&#8377 <?= $item['price']; ?>&#160;&#160;&#160;<a class="btn btn-primary btn-lg" href="#" role="button">ADD</button></td>  
+                                        <td>&#8377 <?= $item['price']; ?>&#160;&#160;&#160;<button class="btn btn-primary btn-lg" type='submit' name="item" value="<?= $item['id']; ?>">add</td>
                                     </tr>
 
                         <?php
@@ -179,8 +180,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         ?>
 
                         </tr>
-                    </tbody>
-                </table>
+                </tbody>
+            </table>
             <!-- </center> -->
 
         </section>
@@ -223,8 +224,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <br>
                                     <center>
                                         <p>
-                                        <a href="about.php">About</a><br>
-                                        <a href="ucc.php">User Code Of Conduct</a>
+                                            <a href="about.php">About</a><br>
+                                            <a href="ucc.php">User Code Of Conduct</a>
                                         </p>
                                     </center>
                         </div>

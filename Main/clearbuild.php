@@ -7,5 +7,5 @@ if (mysqli_query($conn, $sql)) {
 } else {
     echo "Error deleting record: " . mysqli_error($conn);
 }
-header("Location: buildertest.php?success=ok");
+header("Location: builder.php?success=ok");
 ?>
