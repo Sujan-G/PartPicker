@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2023 at 08:23 PM
+-- Generation Time: Feb 12, 2023 at 08:37 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -49,7 +49,7 @@ INSERT INTO `builds` (`b_id`, `id`, `category_id`, `price`) VALUES
 --
 
 CREATE TABLE `categories` (
-  `category_id` varchar(255) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `name` varchar(191) NOT NULL,
   `description` mediumtext NOT NULL,
   `image` varchar(191) NOT NULL,
@@ -64,13 +64,13 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`category_id`, `name`, `description`, `image`, `meta_title`, `status`, `popular`, `created_at`) VALUES
-('1', 'CPU', 'cpu', 'cpu.jpg', 'cpu', 1, 0, '2023-01-15 16:33:03'),
-('2', 'Memory', 'ram', 'ram.png', 'ram', 1, 1, '2023-02-02 17:13:03'),
-('3', 'CPU COOLER', 'cooler ', 'cooler.jpg', 'cpucooler', 1, 1, '2023-02-02 18:23:00'),
-('4', 'MotherBoard', 'motherboard', 'nav-motherboard.png', 'mb', 1, 1, '2023-02-02 19:02:47'),
-('5', 'Storage', 'hdd sdd', 'hdd.jpg', 'storage', 1, 0, '2023-02-02 19:30:04'),
-('6', 'Graphics Card', 'card', 'graphics.jpeg', 'graphics card', 1, 1, '2023-02-02 19:49:05'),
-('7', 'Power Supply', 'psu', 'psu.webp', 'psu', 1, 1, '2023-02-02 20:03:24');
+(1, 'CPU', 'cpu', 'cpu.jpg', 'cpu', 1, 0, '2023-01-15 16:33:03'),
+(2, 'Memory', 'ram', 'ram.png', 'ram', 1, 1, '2023-02-02 17:13:03'),
+(3, 'CPU COOLER', 'cooler ', 'cooler.jpg', 'cpucooler', 1, 1, '2023-02-02 18:23:00'),
+(4, 'MotherBoard', 'motherboard', 'nav-motherboard.png', 'mb', 1, 1, '2023-02-02 19:02:47'),
+(5, 'Storage', 'hdd sdd', 'hdd.jpg', 'storage', 1, 0, '2023-02-02 19:30:04'),
+(6, 'Graphics Card', 'card', 'graphics.jpeg', 'graphics card', 1, 1, '2023-02-02 19:49:05'),
+(7, 'Power Supply', 'psu', 'psu.webp', 'psu', 1, 1, '2023-02-02 20:03:24');
 
 -- --------------------------------------------------------
 
@@ -197,6 +197,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `products`
