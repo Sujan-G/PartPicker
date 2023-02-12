@@ -191,9 +191,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 <td class="ref"><a class="btn btn-outline-primary btn-lg" href="cpu.php" role="button">Add <?= $item['meta_keywords']; ?></a></button><br>&#160;&#160;&#160;&#160;&#160;
                                     <button class="btn btn-outline-danger btn-lg" type='submit' name="clear" value="<?= $item['id']; ?>">Remove <?= $item['meta_keywords']; ?>
                                 </td></a>
-                                <table class="table table-light table-striped table-bordered">
-                                    <thead class="thead-dark">
-                                        
 
                             </tr>
 
@@ -205,21 +202,45 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             }
 
                     ?>
+                    <tr>
+                        <td></td>
+                            
+                        <td></td>
+                        <td></td>
+                        <td>
+                        <h4>
+                <?php  include('db_conn.php');
+                         global $conn; 
+                         $query = "SELECT sum(price) FROM builds";
+                         $result = mysqli_query($conn, $query);
+                         $row = mysqli_fetch_array($result);
+                         $sum = $row[0];
+                         ?>
+                         <p>
+                            Grand Total:&#8377
+                         <?php 
+                         echo $sum;
+                         ?>
+                         </p>
+                </h4>
+              
+                        </td>
+                    </tr>
                     
                         </tbody>
                 </table>
-                <tr id="totals">
-                                <td></td>
-                                <td></td>
-                                <td><strong>Grand Total</strong></td>
-                                <td class="price text-right"></td>
-                                <td></td>
+                <?php  include('db_conn.php');
+                         global $conn; 
+                         $query = "SELECT sum(price) FROM builds";
+                         $result = mysqli_query($conn, $query);
+                         $row = mysqli_fetch_array($result);
+                         $sum = $row[0];
+                         ?>
             </center>
         </section>
-
-        <button class="btn btn-primary btn-lg" type='submit' name="clear" value="<?= $item['id']; ?>">Clear
+        <button class="Clearbuild" type='submit' name="clear" value="<?= $item['id']; ?>">Clear All
             </form>
-            <button class="savebuild">Save Build</button>
+            <button class="savebuild">Buy Build</button>
             <section class="footer" id="footer">
                 <table>
                     <tr>
