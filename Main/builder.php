@@ -228,18 +228,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     
                         </tbody>
                 </table>
-                <?php  include('db_conn.php');
-                         global $conn; 
-                         $query = "SELECT sum(price) FROM builds";
-                         $result = mysqli_query($conn, $query);
-                         $row = mysqli_fetch_array($result);
-                         $sum = $row[0];
-                         ?>
             </center>
         </section>
-        <button class="Clearbuild" type='submit' name="all" value="all">Clear All
-            </form>
-            <button class="savebuild">Buy Build</button>
+        <button class="Clearbuild" type='submit' name="all" value="all">Clear All</button>
+            </form><br>
+           <form action="buy.php" action="POST" ><button class="savebuild" type='submit' name="buynow" value="Buy build"> Buy Build</button>
+                        </form>
+
+
             <section class="footer" id="footer">
                 <table>
                     <tr>
@@ -289,16 +285,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 </table>
             </section>
             <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+            
             <script>
-                <?php if (isset($_SESSION['message'])) { ?>
-
-                    alertify.set('notifier', 'position', 'top-right');
-                    alertify.success('<?= $_SESSION['message'] ?>');
-                <?php
-                    unset($_SESSION['message']);
-                }
-                ?>
-            </script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+ function_alert("Buy order placed"); 
+    //   var popup = document.getElementById("myPopup");
+//   popup.classList.toggle("show");
+}
+</script>
             <!-- custom js file link  -->
             <script src="script.js"></script>
     </body>
